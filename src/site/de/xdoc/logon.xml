@@ -1,0 +1,104 @@
+<!DOCTYPE document PUBLIC "-//Apache Software Foundation//DTD XDOC 1.0//EN"
+        "http://maven.apache.org/dtd/xdoc_1_0.dtd" [
+
+                <!ENTITY #8482 "&amp;#8482;">
+        ]>
+
+<document>
+
+  <properties>
+    <author email="stephan@lotk.de">Stephan Sann</author>
+    <title>Benutzerdokumentation: Logon</title>
+  </properties>
+
+  <body>
+    <!-- The body of the document contains a number of sections -->
+    <section name="Erklärung">
+      Auf dieser Seite werden die Login-Daten für die Mailbox erfaßt, auf die
+      zugegriffen werden soll.
+    </section>
+
+    <section name="Die GUI">
+      <img src="../images/screenshot_logon.jpg" width="780" height="600"/>
+    </section>
+
+    <section name="Die Eingaben">
+      <p>Sprache:
+      <br/>
+      Wenn die Sprache, auf die der aufrufende Browser konfiguriert ist, von 
+      yawebmail unterstützt wird, wird diese vorausgewählt. Ansonsten kann eine
+      der angebotenen Sprachen gewählt werden.</p>
+
+      <p>Mailbox-Server:
+      <br/>
+      Eingabe des Servers (Host), auf dem sich die Mailbox (POP3- oder
+      IMAP-Konto) befindet. Ist der Hostname nicht bekannt, kann dieser beim
+      Provider des eMail-Kontos erfragt werden.</p>
+
+      <p>Mailbox-Protokoll:
+      <br/>
+      Auswahl, ob das eMail-Konto per <a href="glossary.html#pop3">POP3</a>,
+      <a href="glossary.html#imap">IMAP</a>,
+      <a href="glossary.html#pop3s">POP3/SSL</a> oder
+      <a href="glossary.html#imaps">IMAP/SSL</a> abfragbar ist (manche Konten
+      unterstützen mehrere Protokolle). Bei Unsicherheit erst POP3 und dann IMAP
+      versuchen. Alternativ kann auch der Provider des eMail-Kontos Auskunft
+      geben.
+      <br/>
+      Beim Zugriff auf einen Google&#8482; Mail accout sollte zuerst POP3 (SSL)
+      probiert werde.</p>
+
+      <p>Schraubenschlüssel-Icon:
+      <br/>
+      Durch Klick auf das Schraubenschlüssel-Icon kann ein abweichender
+      Server-Port gewählt werden, gegen den verbunden wird (dies sollte nur
+      getan werden, wenn dies vom eMail-Account-Anbieter so gefordert wird).</p>
+
+      <p>Mailbox-Benutzername:
+      <br/>
+      Der Benutzername des eMail-Kontos. Ist der Benutzername nicht bekannt,
+      kann dieser beim Provider des eMail-Kontos erfragt werden.</p>
+
+      <p>Mailbox-Passwort:
+      <br/>
+      Das Passwort des eMail-Kontos. Ist das Passwort nicht bekannt, kann dieses
+      beim Provider des eMail-Kontos erfragt werden.</p>
+
+      <p>Nachrichten-Aufteilung:
+      <br/>
+      Diese Einstellung betrifft die Erstellung der Nachrichten-Liste(n).
+      <br/>
+      "Alle Nachrichten auf einer Seite" veranlaßt yawebmail eine
+      Nachrichten-Liste für alle Nachrichten in einem jeweiligen
+      Nachrichten-Ordner zu erstellen. Dies kann bei einer größeren Anzahl von
+      Nachrichten zu längeren Wartezeiten führen, da alle Nachrichen-Header
+      geladen werden müssen. 
+      <br/>
+      "Mehrere Seiten (Sortierung deaktiviert)" veranlaßt yawebmail den Inhalt
+      von Nachrichten-Orndern auf mehrere Nachrichten-Listen aufzuteilen (z.B.
+      Nachricht 1 - 25, Nachrich 26 - 50, etc.). Diese Funktion deaktiviert die
+      Sortierung über alle Nachrichten, da nur die Nachrichten-Header der
+      gerade aktuellen Nachrichten-Liste geladen werden (diese können folglich
+      nicht mit den Nachrichten-Headern verglichen werden, die nicht geladen
+      werden). Die Anzahl der Nachrichten pro Nachrichten-Liste wird vom
+      yawebmail-Administrator festgelegt (Default-Wert: 25).
+      </p>
+
+      <p>"login"-Button:
+      <br/>
+      Ein Klick auf den "login"-Button verbindet mit dem eMail-Konto.</p>
+
+      <p>"zurücksetzen"-Button:
+      <br/>
+      Ein Klich auf den "zurücksetzen"-Button setzt alle Eingabefelder zurück.
+      </p>
+
+      <p>"Hilfe"-Button:
+      <br/>
+      Den "Hilfe"-Button klicken, um Hilfe für diesen Bildschirm zu erhalten.
+      Es wird genau diese Seite angezeigt ;-)</p>
+    </section>
+
+  </body>
+
+</document>

@@ -1,0 +1,32 @@
+<document>
+
+  <properties>
+    <author email="stephan@lotk.de">Stephan Sann</author>
+    <title>User-documentation: Check certificate</title>
+  </properties>
+
+  <body>
+    <!-- The body of the document contains a number of sections -->
+    <section name="Description">
+      If you log in to a mail-server with a self-issued certificate (may happen
+      with mailbox-protocol "POP3 (SSL)" or "IMAP (SSL)" only) yawebmail will
+      ask you to check the details of the given certificate. 
+    </section>
+
+    <section name="The GUI">
+      <img src="images/screenshot_check_cert.jpg" width="780" height="600"/>
+    </section>
+
+    <section name="The input">
+      <p>"yes"-button:
+      <br/>
+      Push the "yes"-button if you trust the given certificate.</p>
+
+      <p>"no"-button:
+      <br/>
+      Push the "no"-button if you do not trust the given certificate. You will
+      get back to the login-screen.</p>
+    </section>
+  </body>
+
+</document>

@@ -1,0 +1,93 @@
+<document>
+
+  <properties>
+    <author email="stephan@lotk.de">Stephan Sann</author>
+    <title>User-documentation: Mailfolder overview</title>
+  </properties>
+
+  <body>
+    <!-- The body of the document contains a number of sections -->
+    <section name="Description">
+      On this page you see the current messages existing in the current
+      mailfolder. With POP3 there's only one folder ("INBOX"), so
+      folder-navigation is deactivated. With IMAP you can create different
+      mailfolders - a folder-navigation will appear on the left-hand side.
+    </section>
+
+    <section name="The GUI">
+      <img src="images/screenshot_overview.jpg" width="780" height="600"/>
+    </section>
+
+    <section name="The input">
+      <p>"delete selected mails"-button:
+      <br/>
+      Push the "delete selected mails"-button to delete the selected mails (to
+      select a particular mail mark the corresponding preceding checkbox).</p>
+
+      <p>"check for new mails"-button:
+      <br/>
+      Push the "check for new mails"-button to check for new mails on your
+      mailbox-server. The mailfolder overview will be refreshed.</p>
+
+      <p>"create new mail"-button:
+      <br/>
+      Push the "create new mail"-button to get to the "create new mail"-page.
+      Check the "create new mail"-documentation to get further informations.</p>
+
+      <p>"help"-button:
+      <br/>
+      Push the "help"-button to get help for this screen. Actually you will see
+      this page ;-)</p>
+
+      <p>"logout"-button:
+      <br/>
+      Push the "logout"-button to log out from the current session.
+      All informations collected during the session will be discarded.</p>
+
+      <p>"create folder"-button (not available with POP3-protocol):
+      <br/>
+      Push the "create folder"-button to create a new subfolder within the
+      current folder. The name for the new folder has to be supplied in the
+      textfield above this button. If this button is grey, the mailbox server
+      doesn't allow the creation of subfolders within the current folder.</p>
+
+      <p>"delete folder"-button (not available with POP3-protocol):
+      <br/>
+      Push the "delete folder"-button to delete the subfolder selected in the
+      dropdownlist above this button. If this button is grey, the mailbox server
+      doesn't allow subfolders within the current folder.</p>
+
+      <p>Subject-links:
+      <br/>
+      Each message-subject is equipped with a link to the corresponding "View
+      single message"-page. There you can read the chosen message. Check the
+      "View single message"-documentation to get further informations.</p>
+
+      <p>Column-header:
+      <br/>
+      You can change the sort-order of the displayed mails by clicking on the
+      appropriate column-header.</p>
+
+      <p>"Spamlevel"-column:
+      <br/>
+      If you got Spamassassin (http://spamassassin.apache.org/) installed on
+      your mailserver, it will add a "X-Spam-Level"-header to each eMail you
+      get. It displays the email's total spam-score using the asterisk character
+      (*). For further informations check the Spamassassin-Website. If the
+      "X-Spam-Level"-header is not found in a message, the string "[not set]"
+      will be displayed in this column.</p>
+
+      <p>"select all"-button:
+      <br/>
+      Push the "select all"-button to select all mails (all preceding checkboxes
+      will be marked).</p>
+
+      <p>"move selected messages to" (not available with POP3-protocol):
+      <br/>
+      Here you can move selected messages to other folders. Select the desired
+      target-folder and click the "execute"-button.</p>
+    </section>
+
+  </body>
+
+</document>

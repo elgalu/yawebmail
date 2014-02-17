@@ -1,0 +1,157 @@
+<document>
+
+  <properties>
+    <author email="stephan@lotk.de">Stephan Sann</author>
+    <title>Wellcome!</title>
+  </properties>
+
+  <body>
+
+    <br/>
+    <script type="text/javascript" src="js/google-adsence.js"/>
+    <script type="text/javascript"
+            src="http://pagead2.googlesyndication.com/pagead/show_ads.js"/>
+
+    <!-- The body of the document contains a number of sections -->
+    <section name="What's it?">
+      yawebmail is a webmail-client written in Java as a webapp. Having it
+      deployed on your Internet-accessed webserver, you can get access to your
+      POP3- or IMAP-Mailbox, even if you are behind a firewall that blocks the
+      eMail-ports - in general port 25 for SMTP, port 110 for POP3 and port 143
+      for IMAP (natch you must be allowed to access your webserver via HTTP...).
+    </section>
+
+    <section name="How does yawebmail compare with other webmail-clients?">
+      While other webmail-clients may have a lot of bells and whistles,
+      yawebmail concentrates on the support of as many standards as possible.
+      <br/><br/>
+
+      Here's a short overview* (based on the feature-lists and FAQs of the
+      particular webmail-clients, as well as some personal tests):
+      <br/>
+      <table>
+        <thead>
+          <tr>
+            <td>Standard</td>
+            <td>yawebmail</td>
+            <td><a href="http://www.openwebmail.org"
+                    target="_blank">Open WebMail</a></td>
+            <td><a href="http://www.desknow.com"
+                    target="_blank">DeskNow Lite Webmailer</a></td>
+            <td><a href="http://atmail.com/"
+                    target="_blank">@Mail Webmailer</a></td>
+            <td><a href="http://jwebmail.sourceforge.net/"
+                    target="_blank">JWebmail</a></td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><a href="glossary.html#pop3">POP3</a></td>
+            <td><img src="images/yes_16x16.png"/></td>
+            <td><img src="images/yes_16x16.png"/></td>
+            <td><img src="images/yes_16x16.png"/></td>
+            <td><img src="images/yes_16x16.png"/></td>
+            <td><img src="images/yes_16x16.png"/></td>
+          </tr>
+          <tr>
+            <td><a href="glossary.html#imap">IMAP</a></td>
+            <td><img src="images/yes_16x16.png"/></td>
+            <td><img src="images/no_16x16.png"/></td>
+            <td><img src="images/no_16x16.png"/></td>
+            <td><img src="images/yes_16x16.png"/></td>
+            <td><img src="images/yes_16x16.png"/></td>
+          </tr>
+          <tr>
+            <td><a href="glossary.html#pop3s">POP3/SSL</a></td>
+            <td><img src="images/yes_16x16.png"/></td>
+            <td><img src="images/no_16x16.png"/></td>
+            <td><img src="images/no_16x16.png"/></td>
+            <td><img src="images/no_16x16.png"/></td>
+            <td><img src="images/yes_16x16.png"/></td>
+          </tr>
+          <tr>
+            <td><a href="glossary.html#imaps">IMAP/SSL</a></td>
+            <td><img src="images/yes_16x16.png"/></td>
+            <td><img src="images/no_16x16.png"/></td>
+            <td><img src="images/no_16x16.png"/></td>
+            <td><img src="images/no_16x16.png"/></td>
+            <td><img src="images/yes_16x16.png"/></td>
+          </tr>
+          <tr>
+            <td><a href="glossary.html#smtp">SMTP</a></td>
+            <td><img src="images/yes_16x16.png"/></td>
+            <td><img src="images/yes_16x16.png"/></td>
+            <td><img src="images/yes_16x16.png"/></td>
+            <td><img src="images/yes_16x16.png"/></td>
+            <td><img src="images/yes_16x16.png"/></td>
+          </tr>
+          <tr>
+            <td><a href="glossary.html#smtpAuth">SMTP Auth.</a></td>
+            <td><img src="images/yes_16x16.png"/></td>
+            <td><img src="images/yes_16x16.png"/></td>
+            <td><img src="images/no_16x16.png"/></td>
+            <td><img src="images/no_16x16.png"/></td>
+            <td><img src="images/no_16x16.png"/></td>
+          </tr>
+          <tr>
+            <td><a href="glossary.html#smtpSsl">SMTP/SSL</a></td>
+            <td><img src="images/yes_16x16.png"/></td>
+            <td><img src="images/no_16x16.png"/></td>
+            <td><img src="images/no_16x16.png"/></td>
+            <td><img src="images/no_16x16.png"/></td>
+            <td><img src="images/no_16x16.png"/></td>
+          </tr>
+          <tr>
+            <td><a href="glossary.html#smtpTls">SMTP/TLS</a></td>
+            <td><img src="images/yes_16x16.png"/></td>
+            <td><img src="images/no_16x16.png"/></td>
+            <td><img src="images/no_16x16.png"/></td>
+            <td><img src="images/no_16x16.png"/></td>
+            <td><img src="images/no_16x16.png"/></td>
+          </tr>
+          <tr>
+            <td><a href="glossary.html#idn">IDN-Domains</a></td>
+            <td><img src="images/yes_16x16.png"/></td>
+            <td><img src="images/no_16x16.png"/></td>
+            <td><img src="images/no_16x16.png"/></td>
+            <td><img src="images/no_16x16.png"/></td>
+            <td><img src="images/no_16x16.png"/></td>
+          </tr>
+          <tr>
+            <td><a href="glossary.html#utf8">UTF-8</a></td>
+            <td><img src="images/yes_16x16.png"/></td>
+            <td><img src="images/yes_16x16.png"/></td>
+            <td><img src="images/yes_16x16.png"/></td>
+            <td><img src="images/yes_16x16.png"/></td>
+            <td><img src="images/yes_16x16.png"/></td>
+          </tr>
+        </tbody>
+      </table>
+      *This overview is about supported standards, not about features. As a
+      matter of fact the compared clients may have larger feature-lists.
+    </section>
+
+    <section name="Download">
+      Download the deployable WAR-File from Sourceforge:
+      <br/>
+      <a href="http://sourceforge.net/project/showfiles.php?group_id=131110"
+              target="_blank">yawebmail-n.n.n.zip</a>
+    </section>
+
+    <section name="Installation">
+      Just unzip the downloaded "yawebmail-n.n.n.zip" and throw the
+      "yawebmail.war"-file into the deployment-directory of your
+      Servlet-container (tomcat, jetty, weblogic, ..) and you're ready to go!
+    </section>
+
+    <section name="Configuration">
+      None :-) No path to be set, no Database to be configured.
+    </section>
+
+    <section name="Start">
+      Start your browser and open
+      "http://#yourserver.com#:#appserverport#/yawebmail/".
+    </section>
+  </body>
+
+</document>

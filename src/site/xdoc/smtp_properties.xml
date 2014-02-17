@@ -1,0 +1,66 @@
+<document>
+
+  <properties>
+    <author email="stephan@lotk.de">Stephan Sann</author>
+    <title>SMTP properties</title>
+  </properties>
+
+  <body>
+    <!-- The body of the document contains a number of sections -->
+    <section name="SMTP properties">
+      The SMTP properties allow you to adjust the SMTP-server(s) and -port the
+      user can connect to. You may want to limit the choice of your users to
+      prevent them from sending spam via your application-server.
+
+      <p>SMTP-host-choice "free":
+      <br/>
+      The user will be allowed to choose any SMTP-server for his mail to be
+      send. This setting should be handled with care, since users could abuse
+      your application-server to send spam.
+      </p>
+
+      <p>SMTP-host-choice "domain" (default):
+      <br/>
+      The user will be allowed to choose a SMTP-server within the domain of the
+      mailbox-host (for example if the user has a mailbox host "pop.domain.tld",
+      he will be able to choose a SMTP-server within the domain "domain.tld").
+      This considerably reduces the the users chance to send spam by dint of
+      your server.
+      </p>
+
+      <p>SMTP-host-choice "none":
+      <br/>
+      The user can only use the SMTP-host you allow. With this setting you also
+      have to specify the properties "forced_smtp_host_name" and
+      "forced_smtp_host_port".
+      </p>
+
+      <h4>Howto change SMTP properties</h4>
+
+      <ol>
+        <li>Deploy yawebmail.war</li>
+        <li>
+          Your Servlet-container will unpack the yawebmail.war into a normal
+          directory (Tomcat will create "TOMCAT_HOME/webapps/yawebmail/").
+        </li>
+        <li>
+          Change into the created directory. If you can't find it, undeploy the
+          WAR-file and unpack it by yourself ("jar -xf yawebmail.war").
+        </li>
+        <li>
+          Change into "WEB-INF/classes/de/lotk/yawebmail/properties/" and open
+          "smtp.properties" with your favorite text-editor.
+        </li>
+        <li>
+          The settings within "smtp.properties" are self-describing. Change
+          them to your desired values. Don't forget to save the changes.
+        </li>
+        <li>
+          Restart your Servlet-container (or re-pack and re-deploy your modified
+          WAR-file if you chose the "unpack yourself"-approach).
+        </li>
+      </ol>
+    </section>
+  </body>
+
+</document>

@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<faqs title="Frequently Asked Questions" toplink="false">
+
+  <part id="installation">
+    <title>Installation</title>
+   
+    <faq id="system-requirements">
+      <question>
+        Was sind die Systemvoraussetzungen für yawebmail?
+      </question>
+      <answer>
+        <p>yawebmail erfordert mindestens eine JVM der Java-Version 1.5 und
+        einen Servlet-Container, der der Servlet-Spezifikation 2.4 und der
+        JSP-Spezifikation 2.0 entspricht.</p>
+      </answer>
+    </faq>
+
+    <faq id="servlet-container">
+      <question>
+        Welche (Web-)Application-Server erfüllen diese Voraussetzungen?
+      </question>
+      <answer>
+        <p>yawebmail wird unter Tomcat 5.5 entwickelt und getestet, aber die
+        folgenden Server sollten auch geeignet sein (Probleme mit diesen Servern
+        bitte melden):</p>
+        <p>- Tomcat seit Version 5.5
+        <br/>
+        - JBoss seit Version 4.0.2 (Tomcat 5.5.x enthalten)
+        <br/>
+        - Apache Geronimo seit Version 1.0
+        <br/>
+        - Bea Weblogic seit Version 9</p>
+      </answer>
+    </faq>
+  </part>
+
+  <part id="installationProblems">
+    <title>Probleme bei Installation / Deployment / erstem Start</title>
+
+    <faq id="srcVersion">
+      <question>
+        Ich bekomme Exceptions wie "StartupServletContextListener" und/oder
+        "faces-initialization does not work" beim Deployment/Server-start.
+        Warum?
+      </question>
+      <answer>
+        <p>Kann passieren, wenn anstatt der Datei "yawebmail-n.n.n.zip" die
+        Datei "yawebmail-n.n.n-src.zip" heruntergeladen und hieraus das
+        Verzeichnis "applications/yawebmail" deployed wird.</p>
+        <p>Falls dem so ist, die Datei "yawebmail-n.n.n.zip" herunter laden und
+        das darin enthaltene yawebmail.war-File im Servlet-Container
+        deployen.</p>
+      </answer>
+    </faq>
+
+    <faq id="Permission problems">
+      <question>
+        Ich habe yawebmail.war in meinem Servlet-Container deployed, aber wenn
+        ich die Applikation aufrufen möchte bekomme ich Exceptions. Warum?
+      </question>
+      <answer>
+        <p>Viele Probleme mit yawebmail sind Berechtigungs-Probleme. Bei Tomcat
+        (speziell wenn kein Logfile unter /logs zu finden ist) kann dies
+        versucht werden:</p>
+
+        <p><code>
+        /pfad/zu/tomcat/bin/shutdown.sh
+        <br/><br/>
+ 
+        als root:
+        <br/>
+        chown -R #hier-tomcat-benutzer-einfügen#:#hier-tomcat-benutzergruppe-einfügen# /pfad/zu/tomcat 
+        <br/><br/>
+
+        als tomcat-Benutzer: 
+        <br/>
+        /pfad/zu/tomcat/bin/startup.sh
+        </code>
+        <br/><br/>
+ 
+        Wenn die Exception erneut auftritt, diese Datei ansehen:
+        <br/>
+        /pfad/zu/tomcat/logs/catalina.out 
+        </p>
+      </answer>
+    </faq>
+
+    <faq id="path">
+      <question>
+        Ich habe die Berechtigungen wie geraten gesetzt, bekomme aber immernoch
+        Exception. Was kann ich noch tun?
+      </question>
+      <answer>
+        <p>Pfad-Einstellungen und Java-Version überprüfen. Vielleicht ist für
+        den Tomcat-Benutzer ein falscher Pfad oder eine falsche Version gesetzt
+        (manche Linux-Installationen liefern einen kaputten Java-Link in
+        /usr/bin/java):</p>
+
+        <p><code>
+        your-machine:~# su - #hier-tomcat-benutzer-einfügen#
+        <br/>
+        (Das "-" nicht vergessen - es lädt die Umgebung des Tomcat-Benutzers.)
+        <br/><br/>
+
+        tomcat@your-machine:~$ env
+        <br/>
+        [...]
+        <br/>
+        JAVA=/usr/local/java/current/bin/java
+        <br/>
+        JAVA_HOME=/usr/local/java/current/
+        <br/>
+        [...]
+        <br/><br/>
+
+        tomcat@your-machine:~$ java -version
+        </code></p>
+      </answer>
+    </faq>
+
+    <faq id="path">
+      <question>
+        Nicht hat geholfen. Was nun?
+      </question>
+      <answer>
+        <p>Das Problem zusammen mit dem verwendeten Betriebssystem,
+        der Java-Version, der Servlet-Container-Version und einem Stacktrace
+        im Forum posten:
+        <br/>
+        <a href="https://sourceforge.net/forum/forum.php?forum_id=444908"
+                target="_blank">https://sourceforge.net/forum/forum.php?forum_id=444908</a>
+        </p>
+      </answer>
+    </faq>
+  </part>
+
+  <part id="otherProblems">
+    <title>Andere Probleme</title>
+   
+    <faq id="java-heap-space">
+      <question>
+        Ich bekomme ein "javax.servlet.ServletException: Java heap space" wenn
+        ich eine Nachricht öffne. Was ist das?
+      </question>
+      <answer>
+        <p>Wenn eine Nachricht zur Anzeige geladen wird, muß sie komplett in den
+        Server-Hauptspeicher geladen werden. Wenn die Nachricht einen großen
+        Dateianhang hat, kann die dem Applikations-Server zugewiesene Menge an
+        Arbeitsspeicher überschritten werden. Über die
+        Kommandozeilen-Option:</p>
+        <code>-Xms64m -Xmx1024m</code>
+        <p>im Startscript des Applikation-Servers kann die Menge an zugewiesenem
+        Arbeitsspeicher erhöht werden ("java -X" zeigt weitere Infos an).</p>
+      </answer>
+    </faq>
+
+    <faq id="trustAnchors">
+      <question>
+        Ich bin mit meiner eigenen yawebmail-Installation nicht in der Lage,
+        mich an einem SSL-Mailaccount (POP3S, IMAPS) anzumelden ("Verbindung zum
+        Host "x.tld" auf Port X konnte nicht hergestellt werden.")!?
+      </question>
+      <answer>
+        <p>Wenn eine Verbindung mit Hilfe der <a target="_blank"
+        href="https://www.openwebtools.org/yawebmail/">yawebmail-"Test drive"
+        Installation</a> unter Verwendung der gleichen Login-Daten möglich ist,
+        könnte das Problem durch eine <code>javax.net.ssl.SSLException</code>
+        ("java.lang.RuntimeException: Unexpected error:
+        java.security.InvalidAlgorithmParameterException: the trustAnchors
+        parameter must be non-empty" (kann nur durch Remote-Debugging
+        herausgefunden werden)) verursacht werden.
+        <br/>
+        Manche Java-Installationen (wie diablo-jdk1.6.0 auf FreeBSD) haben eine
+        offensichtlich nicht funktionierende "cacerts"-Datei in
+        "JAVA_HOME/jre/lib/security". Diese Datei muß durch eine
+        funktionstüchtige Version ersetzt werden (die JRE- and JDK-Downloads von
+        <a target="_blank" href="http://java.sun.com/">http://java.sun.com/</a>
+        sollten alle eine gültige enthalten). Zur Sicherheit sollte das Original
+        gesichert werden, falls es Probleme mit dem Ersatz gibt.</p>
+      </answer>
+    </faq>
+  </part>
+
+  <part id="misc">
+    <title>Sonstiges</title>
+   
+    <faq id="why-big">
+      <question>
+        Warum ist das WAR-File so groß?
+      </question>
+      <answer>
+        <p>Dies liegt an den verwendeten JAR-Dateien (für JSF (myFaces),
+        Javamail, Jakarta-Commons, etc.). Die eigentlichen yawebmail-Klassen
+        verbrauchen nur ca. 5% der Größe des WAR-Files.</p>
+      </answer>
+    </faq>
+  </part>  
+
+</faqs>

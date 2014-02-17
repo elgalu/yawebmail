@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<faqs title="Frequently Asked Questions" toplink="false">
+
+  <part id="installation">
+    <title>Installation</title>
+   
+    <faq id="system-requirements">
+      <question>
+        What are the system requirements for yawebmail?
+      </question>
+      <answer>
+        <p>yawebmail minimal requires a JVM of Java-version 1.5 and a
+        Servlet-Container conforming to the Servlet-Specification 2.4 /
+        JSP-Specification 2.0</p>
+      </answer>
+    </faq>
+
+    <faq id="servlet-container">
+      <question>
+        Which (web-)application-server do fulfill these requirements?
+      </question>
+      <answer>
+        <p>yawebmail is developed and tested under Tomcat 5.5, but these ones
+        should do the job for you too (if you encounter problems, please report
+        them):</p>
+        <p>- Tomcat since version 5.5
+        <br/>
+        - JBoss since version 4.0.2 (Tomcat 5.5.x included)
+        <br/>
+        - Apache Geronimo since version 1.0
+        <br/>
+        - Bea Weblogic since version 9</p>
+        <p>Feel free to report others.</p>
+      </answer>
+    </faq>
+  </part>
+
+  <part id="installationProblems">
+    <title>Problems at installation / deployment / first start</title>
+
+    <faq id="srcVersion">
+      <question>
+        I'm getting exceptions like "StartupServletContextListener" and/or
+        "faces-initialization does not work" on deployment/server-start. Why?
+      </question>
+      <answer>
+        <p>May it be that you downloaded the "yawebmail-n.n.n-src.zip"-file
+        instead of the "yawebmail-n.n.n.zip"-file and deployed the directory
+        "applications/yawebmail"?</p>
+        <p>If so, please download "yawebmail-n.n.n.zip" and deploy the
+        yawebmail.war-file with your servlet-container.</p>
+      </answer>
+    </faq>
+
+    <faq id="Permission problems">
+      <question>
+        I deployed the yawebmail.war with my servlet-container, but when I try
+        to access the application I get exceptions. What's it?
+      </question>
+      <answer>
+        <p>Many problems with yawebmail are permission-problems. For Tomcat
+        (especially if you don't find a logfile in /logs) try this:</p>
+
+        <p><code>
+        /path/to/tomcat/bin/shutdown.sh
+        <br/><br/>
+
+        as root:
+        <br/>
+        chown -R #insert-tomcat-user-here#:#insert-tomcat-user-group-here# /path/to/tomcat 
+        <br/><br/>
+
+        as tomcat-user: 
+        <br/>
+        /path/to/tomcat/bin/startup.sh
+        </code>
+        <br/><br/>
+ 
+        If the exception occurs again, check:
+        <br/>
+        /path/to/tomcat/logs/catalina.out 
+        </p>
+      </answer>
+    </faq>
+
+    <faq id="path">
+      <question>
+        I set the permissions like suggested. I still get Exceptions. What else
+        can I do?
+      </question>
+      <answer>
+        <p>Check your path-settings and Java-version. Maybe there is a wrong
+        path or version set for your Tomcat-user (and some Linux-installations 
+        deliver a broken java-link in /usr/bin/java):</p>
+
+        <p><code>
+        your-machine:~# su - #insert-tomcat-user-here#
+        <br/>
+        (Don't forget the "-" to load the environment of your Tomcat-user.)
+        <br/><br/>
+
+        tomcat@your-machine:~$ env
+        <br/>
+        [...]
+        <br/>
+        JAVA=/usr/local/java/current/bin/java
+        <br/>
+        JAVA_HOME=/usr/local/java/current/
+        <br/>
+        [...]
+        <br/><br/>
+
+        tomcat@your-machine:~$ java -version
+        </code></p>
+      </answer>
+    </faq>
+
+    <faq id="path">
+      <question>
+        Nothing helped. What now?
+      </question>
+      <answer>
+        <p>Post your problem along with your OS, Java-version,
+        servlet-container-version and a stacktrace on the forum:
+        <br/>
+        <a href="https://sourceforge.net/forum/forum.php?forum_id=444908"
+                target="_blank">https://sourceforge.net/forum/forum.php?forum_id=444908</a>
+        </p>
+      </answer>
+    </faq>
+  </part>
+
+  <part id="otherProblems">
+    <title>Other problems</title>
+   
+    <faq id="java-heap-space">
+      <question>
+        I'm getting a "javax.servlet.ServletException: Java heap space" when I
+        try to open a message. What's this?
+      </question>
+      <answer>
+        <p>When a message is fetched to be displayed, it has to be loaded into
+        the server-memory in whole. So if it is a message with a big attachment,
+        it can exceed the size of memory that is allocated to your
+        application-server. You can try to set the commandline-options</p>
+        <code>-Xms64m -Xmx1024m</code>
+        <p>in your application-server startscript (see "java -X" to get help on
+        this options and adjust the values to your (hardware-)memory).</p>
+      </answer>
+    </faq>
+
+    <faq id="trustAnchors">
+      <question>
+        I'm not able to log into a SSL-mailaccount (POP3S, IMAPS) with my own
+        yawebmail-installation ("Connection to host "x.tld" on port X could not
+        be established.")!?
+      </question>
+      <answer>
+        <p>If you're able to connect with the <a target="_blank"
+        href="https://www.openwebtools.org/yawebmail/">yawebmail-"Test drive"
+        installation</a> using the same login-data, the problem may be caused by
+        a <code>javax.net.ssl.SSLException</code> ("java.lang.RuntimeException:
+        Unexpected error: java.security.InvalidAlgorithmParameterException: the
+        trustAnchors parameter must be non-empty" (this can only be detected by
+        remote-debugging)).
+        <br/>
+        Some Java-installations (like diablo-jdk1.6.0 on FreeBSD) have a kind of
+        broken "cacerts"-file in "JAVA_HOME/jre/lib/security". Replace this file
+        with a working version (the JRE- and JDK-Downloads from <a
+        target="_blank" href="http://java.sun.com/">http://java.sun.com/</a>
+        should all contain valid ones). Don't forget to backup the original one
+        (just in case you run into trouble with the replacement).</p>
+      </answer>
+    </faq>
+  </part>
+
+  <part id="misc">
+    <title>Misc</title>
+   
+    <faq id="why-big">
+      <question>
+        Why is the WAR-file so big?
+      </question>
+      <answer>
+        <p>This is because of the needed JAR-files (for JSF (myFaces), Javamail,
+        Jakarta-Commons, etc.). The actual yawebmail-classes only take about 5%
+        of the WAR-filesize.</p>
+      </answer>
+    </faq>
+  </part>  
+
+</faqs>

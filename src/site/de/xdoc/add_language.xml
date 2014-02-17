@@ -1,0 +1,60 @@
+<document>
+
+  <properties>
+    <author email="stephan@lotk.de">Stephan Sann</author>
+    <title>Sprache hinzufügen</title>
+  </properties>
+
+  <body>
+    <!-- The body of the document contains a number of sections -->
+    <section name="Sprachdatei übersetzen">
+      Um yawebmail eine weitere Sprache hinzuzufügen, muß lediglich eine Datei
+      in die gewünschte Sprache übersetzt werden.
+
+      <p>Im WAR-Archiv* finden sich unter dem Verzeichnis
+      <br/><br/>
+
+      "WEB-INF/classes/de/lotk/yawebmail/properties/"
+      <br/><br/>
+
+      verschiedene Sprachdateien (z.B. "view_de.properties" oder
+      "view_en.properties"). Die zwei Buchstaben vor dem Punkt entsprechen dem
+      ISO-Sprachcode
+      (<a href="http://ftp.ics.uci.edu/pub/ietf/http/related/iso639.txt"
+              target="_blank">Liste der ISO-Sprachcodes</a>).
+      <br/>
+      Von einer der vorhandenen Dateien eine beliebige in die Zieldatei
+      "view_#Sprachcode#.properties" in das gleiche Verzeichnis kopieren und
+      dort die Übersetzungen vornehmen.
+      </p>
+
+      * Hinweise zum (Ent-)Packen des WAR-Archives
+      <a href="logon_properties.html" target="_blank">hier</a>.
+    </section>
+
+    <section name="Sprachdatei mailen und/oder selbst hinzufügen">
+      Am einfachsten ist es, die übersetzte Datei an die in den Sprachdateien
+      angegebene eMail-Adresse zu mailen. Sie wird dann in das nächste Release
+      von yawebmail übernommen.
+
+      <p>Wer nicht warten möchte, kann die neue Sprachdatei auch selbst
+      hinzufügen (bitte in diesem Fall die Übersetzung trotzdem mailen, damit
+      auch andere yawebmail-user etwas davon haben):
+      </p>
+
+      <ol>
+        <li>
+          Übersetzte Datei in das Sprachdatei-Verzeichnis (s.o.) kopieren (falls
+          nicht bereits passiert).
+        </li>
+        <li>
+          Im Verzeichnis "WEB-INF" der Datei "myfaces-config.xml" unter
+          "locale-config" einen neuen Eintrag "supported-locale" hinzufügen.
+        </li>
+        <li>Servlet-container neu starten.</li>
+      </ol>
+    </section>
+
+  </body>
+
+</document>

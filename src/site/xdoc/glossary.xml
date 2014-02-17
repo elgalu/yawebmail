@@ -1,0 +1,91 @@
+<document>
+
+  <properties>
+    <author email="stephan@lotk.de">Stephan Sann</author>
+    <title>Glossary</title>
+  </properties>
+
+  <body>
+    <!-- The body of the document contains a number of sections -->
+    <section name="Glossary">
+      <h4>Mailbox access protocols</h4>
+
+      <p><a name="pop3">POP3</a>:
+      <br/>
+      Post Office Protocol Version 3 (RFC 1939). Supported by almost any mailbox
+      server. Only one mailfolder ("INBOX") can be used.
+      <br/>
+      If you choose POP3 on the logon form, yawebmail will try to connect to
+      port 110 (default TCP/IP port for POP3) on the demanded mailbox host.</p>
+
+      <p><a name="imap">IMAP</a>:
+      <br/>
+      Internet Message Access Protocol (RFC 3501). Supported by many mailbox
+      servers. IMAP supports the creation of multiple folders, in which you can
+      organize your mails.      
+      <br/>
+      If you choose IMAP on the logon form, yawebmail will try to connect to
+      port 143 (default TCP/IP port for IMAP) on the demanded mailbox host.</p>
+
+      <p><a name="pop3s">POP3 (SSL) / POP3S</a>:
+      <br/>
+      Same as POP3, but all data will be transported over a SSL-Connection. Only
+      a few servers support this protocol.
+      <br/>
+      If you choose POP3 (SSL) on the logon form, yawebmail will try to connect
+      to port 995 (default TCP/IP port for POP3S) on the demanded mailbox host.
+      </p>
+
+      <p><a name="imaps">IMAP (SSL) / IMAPS</a>:
+      <br/>
+      Same as IMAP, but all data will be transported over a SSL-Connection. Only
+      a few servers support this protocol.
+      <br/>
+      If you choose IMAP (SSL) on the logon form, yawebmail will try to connect
+      to port 993 (default TCP/IP port for IMAPS) on the demanded mailbox host.
+      </p>
+
+      <h4>Sending mail</h4>
+
+      <p><a name="smtp">SMTP</a>:
+      <br/>
+      Simple Mail Transfer Protocol (RFC 821 and RFC 2821). Supported by almost
+      any mailserver. This protocol is used when you send an eMail via
+      yawebmail. By default yawebmail suggests TCP/IP port 25 for
+      SMTP-connections (you can change this value if necessary).</p>
+
+      <p><a name="smtpAuth">SMTP Auth.</a>:
+      <br/>
+      SMTP with authentication. Same as SMTP, but the mailserver requires the
+      user to authenticate himself with an username and a password.
+      <br/>
+      If you want to use SMTP Auth. with yawebmail, just fill in an username and
+      a password on the "create new mail"-page.</p>
+
+      <p><a name="smtpSsl">SMTP/SSL</a>:
+      <br/>
+      Same as SMTP, but all data will be transported over a SSL-Connection. The
+      default TCP/IP port for SMTP/SSL is 465.</p>
+
+      <p><a name="smtpTls">SMTP/TLS</a>:
+      <br/>
+      Same as SMTP, but all data will be transported over a TLS-Connection. The
+      default TCP/IP port for SMTP/SSL is 587.</p>
+
+      <h4>Misc</h4>
+
+      <p><a name="idn">IDN</a>:
+      <br/>
+      Internationalized Domain Name - a domain name with non-ASCII-characters.
+      If you send an eMail to a IDN-domain, yawebmail will automatically
+      translate the recipients address to its Punycode-representation.</p>
+
+      <p><a name="utf8">UTF-8</a>:
+      <br/>
+      8-bit Unicode Transformation Format. All eMail-texts will be encoded with
+      UTF-8 by yawebmail. So the recipient should have no problem with special
+      characters you use (of course his client must support UTF-8, too).</p>
+    </section>
+  </body>
+
+</document>

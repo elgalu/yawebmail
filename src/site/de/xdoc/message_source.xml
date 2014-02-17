@@ -1,0 +1,44 @@
+<document>
+
+  <properties>
+    <author email="stephan@lotk.de">Stephan Sann</author>
+    <title>Benutzerdokumentation: Nachrichtenquelltext</title>
+  </properties>
+
+  <body>
+    <!-- The body of the document contains a number of sections -->
+    <section name="Erklärung">
+      Auf dieser Seite kann der Quelltext einer Nachricht angesehen werden.
+    </section>
+
+    <section name="Die GUI">
+      <img src="../images/screenshot_message_source.jpg" width="780" height="600"/>
+    </section>
+
+    <section name="Die Eingaben">
+      <p>"zurück zur Mail"-Button:
+      <br/>
+      Den "zurück zur Mail"-Button klicken, um zurück zur Seite "Einzelne Mail
+      ansehen" zu gelangen (weitere Infos hierzu in der "Einzelne Mail
+      ansehen"-Dokumentation).</p>
+
+      <p>"zurück zur Übersicht"-Button:
+      <br/>
+      Den "zurück zur Übersicht"-Button klicken, um zurück zur
+      Mailordner-Übersicht zu gelangen (weitere Infos hierzu in der
+      "Mailordner-Übersicht"-Dokumentation).</p>
+
+      <p>"Hilfe"-Button:
+      <br/>
+      Den "Hilfe"-Button klicken, um Hilfe für diesen Bildschirm zu erhalten.
+      Es wird genau diese Seite angezeigt ;-)</p>
+
+      <p>"logout"-Button:
+      <br/>
+      Den "logout"-Button klicken, um die aktuelle Session zu beenden. Alle
+      Informationen, die während der Session gesammelt wurden, werden sicher
+      verworfen.</p>
+    </section>
+  </body>
+
+</document>

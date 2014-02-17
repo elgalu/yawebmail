@@ -1,0 +1,100 @@
+<!DOCTYPE document PUBLIC "-//Apache Software Foundation//DTD XDOC 1.0//EN"
+        "http://maven.apache.org/dtd/xdoc_1_0.dtd" [
+
+                <!ENTITY #8482 "&amp;#8482;">
+        ]>
+
+<document>
+
+  <properties>
+    <author email="stephan@lotk.de">Stephan Sann</author>
+    <title>User-documentation: Logon</title>
+  </properties>
+
+  <body>
+    <!-- The body of the document contains a number of sections -->
+    <section name="Description">
+      On this page you enter your login-data for your mailbox.
+    </section>
+
+    <section name="The GUI">
+      <img src="images/screenshot_logon.jpg" width="780" height="600"/>
+    </section>
+
+    <section name="The input">
+      <p>Language:
+      <br/>
+      If your local language is supported by yawebmail (and your browser is
+      configured for this language), it should have been already selected.
+      Otherwise select a language of you choice.</p>
+
+      <p>Mailbox-Server:
+      <br/>
+      The server (host) where your Mailbox (POP3- or IMAP-Account) is located.
+      If you don't know the hostname of your Mailbox please ask your
+      eMail-account-provider.</p>
+
+      <p>Mailbox-Protocol:
+      <br/>
+      Select if your eMail-account is accessible via
+      <a href="glossary.html#pop3">POP3</a>,
+      <a href="glossary.html#imap">IMAP</a>,
+      <a href="glossary.html#pop3s">POP3/SSL</a> or
+      <a href="glossary.html#imaps">IMAP/SSL</a> (some accounts support multiple
+      protocols). If you're not sure, try POP3 first, then IMAP - or ask your
+      eMail-account-provider.
+      <br/>
+      If you would like to log into a Google&#8482; Mail accout, try POP3 (SSL).
+      </p>
+
+      <p>Jaw-wrench-icon:
+      <br/>
+      Click the jaw-wrench-icon if you would like to specify a custom
+      server-port to connect to (do this only if your eMail-account-provider
+      told you so).</p>
+
+      <p>Mailbox-Username:
+      <br/>
+      The username of your eMail-account. If you don't know the username of your
+      Mailbox please ask your eMail-account-provider.</p>
+
+      <p>Mailbox-Password:
+      <br/>
+      The password of your eMail-account. If you don't know the password of your
+      Mailbox please ask your eMail-account-provider.</p>
+
+      <p>Message-arrangement:
+      <br/>
+      This setting affects the arrangement of the message-listing(s).
+      <br/>
+      "All messages on one page" causes yawebmail to build one message-listing
+      for all messages in a particular message-folder. This may result in a
+      longer waiting period if you have a large amount of messages in your
+      folder(s), since all message-headers have to be loaded.
+      <br/>
+      "Multiple pages (disables sorting)" causes yawebmail to split the content
+      of your message-folder(s) to multiple message-listings (message 1 - 25,
+      message 26 - 50, etc.). This feature disables an overall message-sorting
+      since only the message-headers needed for a particular message-listing are
+      loaded (and hence cannot be compared to the message-headers which are not
+      loaded). The amount of messages per message-listing is defined by the
+      yawebmail-admin (default: 25).
+       </p>
+
+      <p>"login"-button:
+      <br/>
+      Push the "login"-button to get access to your mailbox.</p>
+
+      <p>"reset"-button:
+      <br/>
+      Push the "reset"-button to reset all input-fields.</p>
+
+      <p>"help"-button:
+      <br/>
+      Push the "help"-button to get help for this screen. Actually you will see
+      this page ;-)</p>
+    </section>
+
+  </body>
+
+</document>

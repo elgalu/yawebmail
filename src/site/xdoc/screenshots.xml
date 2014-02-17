@@ -1,0 +1,31 @@
+<document>
+
+  <properties>
+    <author email="stephan@lotk.de">Stephan Sann</author>
+    <title>Screenshots</title>
+  </properties>
+
+  <body>
+    <!-- The body of the document contains a number of sections -->
+    <section name="Logon">
+      <img src="images/screenshot_logon.jpg" width="780" height="600"/>
+    </section>
+
+    <section name="Mailfolder overview">
+      <img src="images/screenshot_overview.jpg" width="780" height="600"/>
+    </section>
+
+    <section name="View single message">
+      <img src="images/screenshot_mailview.jpg" width="780" height="600"/>
+    </section>
+
+    <section name="View message source">
+      <img src="images/screenshot_message_source.jpg" width="780" height="600"/>
+    </section>
+
+    <section name="Create new mail">
+      <img src="images/screenshot_new_mail.jpg" width="780" height="600"/>
+    </section>
+  </body>
+
+</document>

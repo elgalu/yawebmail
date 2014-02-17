@@ -1,0 +1,73 @@
+<document>
+
+  <properties>
+    <author email="stephan@lotk.de">Stephan Sann</author>
+    <title>Logon Eigenschaften</title>
+  </properties>
+
+  <body>
+    <!-- The body of the document contains a number of sections -->
+    <section name="Logon Eigenschaften">
+      Soll yawebmail nur einem geschlossenen Benutzerkreis zur Verfügung
+      gestellt werden und dieser nur auf einen bestimmten Mail-Server zugreifen,
+      so können die Logon-Eigenschaften in diesen Bereichen angepaßt werden:
+
+      <p>Portnummern:
+      <br/>
+      Anpassung der POP3- and IMAP-Portnummern, die yawebmail beim Verbinden
+      verwendet.
+      </p>
+
+      <p>Vorauswahl Mailbox-Host:
+      <br/>
+      Vorauswahl eines bestimmten Mailbox-Hosts, mit dem verbunden werden soll.
+      </p>
+
+      <p>Vorausgewählten Mailbox-Host erzwingen:
+      <br/>
+      Der vorausgewählte Mailbox-Host kann erzwungen werden. Benutzer können
+      dann keinen anderen Mailbox-Host mehr auswählen.
+      </p>
+
+      <p>Vorauswahl Mailbox-Protokoll:
+      <br/>
+      Vorauswahl eines bestimmten Mailbox-Protokolls, über das verbunden werden
+      soll.
+      </p>
+
+      <p>Vorausgewähltes Mailbox-Protokoll erzwingen:
+      <br/>
+      Das vorausgewählte Mailbox-Protokoll kann erzwungen werden. Benutzer
+      können dann kein anderes Mailbox-Protokoll mehr auswählen.
+      </p>
+
+      <h4>Wie die Logon-Eigenschaften ändern?</h4>
+
+      <ol>
+        <li>yawebmail.war deployen</li>
+        <li>
+          Der Servlet-Container entpackt yawebmail.war in ein normales
+          Verzeichnis (Tomcat wird "TOMCAT_HOME/webapps/yawebmail/" erstellen).
+        </li>
+        <li>
+          In das erstellte Verzeichnis wechseln. Ist dieses nicht auffindbar,
+          das WAR-File un-deployen und selbst entpacken ("jar -xf
+          yawebmail.war").
+        </li>
+        <li>
+          In "WEB-INF/classes/de/lotk/yawebmail/properties/" wechseln und die
+          Datei "logon.properties" in einem text-editor öffnen.
+        </li>
+        <li>
+          Die Einstellungen in "logon.properties" sind selbsterklärend. Diese
+          auf die gewünschten Werte ändern und nicht vergessen zu speichern.
+        </li>
+        <li>
+          Servlet-container neu starten (oder das Verzeichnis erneut packen und
+          wieder deployen, wenn selbst entpackt wurde).
+        </li>
+      </ol>
+    </section>
+  </body>
+
+</document>

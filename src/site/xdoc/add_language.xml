@@ -1,0 +1,60 @@
+<document>
+
+  <properties>
+    <author email="stephan@lotk.de">Stephan Sann</author>
+    <title>Add language</title>
+  </properties>
+
+  <body>
+    <!-- The body of the document contains a number of sections -->
+    <section name="Translate language-file">
+      To add a new language to yawebmail, you only need to translate one file
+      into the desired language.
+
+      <p>Within the WAR-archive* you find the directory
+      <br/><br/>
+
+      "WEB-INF/classes/de/lotk/yawebmail/properties/"
+      <br/><br/>
+
+      where several language-files are located (e.g. "view_en.properties" or
+      "view_de.properties"). The two letters previous to the dot conform to the
+      ISO-language-code
+      (<a href="http://ftp.ics.uci.edu/pub/ietf/http/related/iso639.txt"
+              target="_blank">List of ISO-language-codes</a>).
+      <br/>
+      Make a copy of any language-file into the target-file
+      "view_#language-code#.properties" into the same directory and do the
+      translations.
+      </p>
+
+      * Find hints to (un-)pack the WAR-archive
+      <a href="logon_properties.html" target="_blank">here</a>.
+    </section>
+
+    <section name="Mail and/or add the language-file">
+      The simplest way is to mail the translated file to the eMail-Address found
+      in the language-files. It will be adopted into the next release of
+      yawebmail then.
+
+      <p>If you don't want to wait, you can add the language-file yourself
+      (in this case please mail the translation anyway, so others can take
+      advantage of your work, too):
+      </p>
+
+      <ol>
+        <li>
+          If not happened yet, copy the translated file into the
+          language-file-directory (see above).
+        </li>
+        <li>
+          Within the directory "WEB-INF" you find the file "myfaces-config.xml".
+          Add a new "supported-locale" entry under "locale-config" there.
+        </li>
+        <li>Restart your Servlet-container.</li>
+      </ol>
+    </section>
+
+  </body>
+
+</document>

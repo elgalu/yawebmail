@@ -1,0 +1,66 @@
+<!DOCTYPE document PUBLIC "-//Apache Software Foundation//DTD XDOC 1.0//EN"
+        "http://maven.apache.org/dtd/xdoc_1_0.dtd" [
+
+                <!ENTITY #x00E5 "&amp;#x00E5;">
+                <!ENTITY #x0107 "&amp;#x0107;">
+                <!ENTITY #26753 "&amp;#26753;">
+                <!ENTITY #27850 "&amp;#27850;">
+                <!ENTITY #x00ed "&amp;#x00ed;">
+        ]>
+
+<document>
+
+  <properties>
+    <author email="stephan@lotk.de">Stephan Sann</author>
+    <title>Spezieller Dank</title>
+  </properties>
+
+  <body>
+    <!-- The body of the document contains a number of sections -->
+    <section name="Spezieller Dank">
+      Spezieller Dank geht an:
+
+      <p>Tomasz Stanczak:
+      <br/>
+      Für eine Menge Ratschläge (nicht nur in Bezug auf yawebmail).
+      </p>
+
+      <p>Bill Shannon (bshannon vom
+      <a href="http://forum.java.sun.com/forum.jspa?forumID=43"
+              target="_blank">JavaMail-Forum</a>):
+      <br/>
+      Für einige sehr geistreiche Lösungen für JavaMail-Probleme.
+      </p>
+
+      <p>Marco Martin (mart von <a href="http://www.notmart.org/"
+              target="_blank">http://www.notmart.org/</a>):
+      <br/>
+      Für die schicken Icons, die in yawebmail verwendet werden
+      (<a href="http://www.kde-look.org/content/show.php/Glaze?content=23966"
+              target="_blank">Glaze auf KDE-LOOK.org</a>).
+      </p>
+
+      <p>Alle Entwickler von
+      <a href="http://java.sun.com/products/javamail/"
+              target="_blank">JavaMail</a>:
+      <br/>
+      Für die Erstellung dieses sehr hilfreichen Frameworks.
+      </p>
+
+      <p>Alle Übersetzer von yawebmail:
+      <br/>
+      Daria Sann (russisch), H&#x00E5;kan Andersson (schwedisch),
+      Vin&#x00ed;cius Oliveira Janones (esperanto und portugiesisch), Po Liang
+      (&#26753;&#27850;) (chinesisch), Vincenzo Martiello (italienisch), Ivan
+      Petrovi&#x0107; (serbisch), Victor Sanchez (spanisch) und Tomasz Stanczak
+      (polnisch)
+      </p>
+
+      <p>Luke Schemonia:
+      <br/>
+      Für das Experimentieren und das Feedback im Bereich IMAP-Funktionalität.
+      </p>
+    </section>
+  </body>
+
+</document>

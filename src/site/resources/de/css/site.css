@@ -1,0 +1,42 @@
+h2 {
+
+  font-size: 20px;
+}
+
+
+#banner {
+
+  background-image: url("../../images/banner_bg.gif");
+  background-repeat: repeat-x;
+  border-style: none;
+}
+
+
+#bannerLeft img {
+
+  padding-left: 5px;
+}
+
+
+#breadcrumbs {
+
+  border-top-color: #666666;
+  border-bottom-color: #666666;
+}
+
+
+#navcolumn img {
+
+  border: 0px;
+  height: auto;
+  width: auto;
+}
+
+
+.section {
+
+  padding-top: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-bottom: 8px;
+}

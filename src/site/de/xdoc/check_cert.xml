@@ -1,0 +1,33 @@
+<document>
+
+  <properties>
+    <author email="stephan@lotk.de">Stephan Sann</author>
+    <title>Benutzerdokumentation: Zertifikat prüfen</title>
+  </properties>
+
+  <body>
+    <!-- The body of the document contains a number of sections -->
+    <section name="Erklärung">
+      Beim Login auf einen Mailserver mit einem selbst ausgestellten Zertifikat
+      (kann nur bei den Mailbox-Protokollen "POP3 (SSL)" oder "IMAP (SSL)"
+      passieren) wird yawebmail zur Prüfung des gegebenen Zertifikates
+      auffordern. 
+    </section>
+
+    <section name="Die GUI">
+      <img src="../images/screenshot_check_cert.jpg" width="780" height="600"/>
+    </section>
+
+    <section name="Die Eingaben">
+      <p>"ja"-Button:
+      <br/>
+      Den "ja"-Button klicken um dem gegebenen Zertifikat zu vertrauen.</p>
+
+      <p>"nein"-Button:
+      <br/>
+      Den "nein"-Button klicken um dem gegebenen Zertifikat nicht zu vertrauen.
+      In diesem Fall wird yawebmail zum Login-Screen zurückkehren.</p>
+    </section>
+  </body>
+
+</document>

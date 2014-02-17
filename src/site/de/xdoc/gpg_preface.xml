@@ -1,0 +1,59 @@
+<document>
+
+  <properties>
+    <author email="stephan@lotk.de">Stephan Sann</author>
+    <title>Security and Trustability: Preface</title>
+  </properties>
+
+  <body>
+    <!-- The body of the document contains a number of sections -->
+    <section name="Preface">
+      This is about how to sign and verify as well as to en- and decrypt
+      messages with GPG (the free software replacement for the PGP suite). To
+      understand how signing and encryption of eMails work, there are many
+      webpages you can study (for example
+      <a href="http://en.wikipedia.org/wiki/GNU_Privacy_Guard"
+      target="_blank">http://en.wikipedia.org/wiki/GNU_Privacy_Guard</a>).
+    </section>
+
+    <section name="Software-requirements">
+      <p>Even though there may be other ways, this howto suggests the use of
+      FireGPG because of its ease of use. The according requirements are:</p>
+      <ul>
+        <li>A GPG-installation (<a href="http://www.gnupg.org/"
+        target="_blank">http://www.gnupg.org/</a>)</li>
+        <li>Firefox (<a href="http://www.mozilla.org/products/firefox/"
+        target="_blank">http://www.mozilla.org/products/firefox/</a>)</li>
+        <li>FireGPG (<a href="http://firegpg.tuxfamily.org/"
+        target="_blank">http://firegpg.tuxfamily.org/</a>)</li>
+      </ul>
+    </section>
+
+    <section name="Configuration-requirements">
+      Sign and decrypt messages:
+      <br/>
+      Before you can sign messages (and retrieve encrypted ones) you got to
+      generate a private/public-keypair. On the command-line, type
+      <br/>
+      <code>gpg --gen-key</code>
+      <br/>
+      and follow the instructions given. Than export your public key to a file
+      via
+      <br/>
+      <code>gpg -a --export your-email-address@provider.tld > pubkey.asc</code>
+      <br/>
+      and put it on your webpage so that mail-recipients can verify your
+      signature und use it to encrypt their messages to you.
+      <br/><br/>
+
+      Encrypt and verify messages:
+      <br/>
+      Before you can encrypt outgoing and verify incomming messages you got to
+      import the recipients/senders public key via:
+      <br/>
+      <code>gpg --import pubkey-of-recipient.asc</code>
+      <br/>
+    </section>
+  </body>
+
+</document>

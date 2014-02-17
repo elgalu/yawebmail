@@ -1,0 +1,101 @@
+<document>
+
+  <properties>
+    <author email="stephan@lotk.de">Stephan Sann</author>
+    <title>Benutzerdokumentation: Mailordner-Übersicht</title>
+  </properties>
+
+  <body>
+    <!-- The body of the document contains a number of sections -->
+    <section name="Erklärung">
+      Auf dieser Seite werden die aktuellen Nachrichten des aktuellen
+      Mailordners angezeigt. Bei POP3 gibt es nur einen Ordner ("INBOX"),
+      weshalb hier die Ordner-Navigation deaktiviert ist. Bei IMAP können
+      verschiedene Ordner existieren; hier wird auf der linken Seite eine
+      Ordner-Navigation angezeigt.
+    </section>
+
+    <section name="Die GUI">
+      <img src="../images/screenshot_overview.jpg" width="780" height="600"/>
+    </section>
+
+    <section name="Die Eingaben">
+      <p>"ausgewählte Mail löschen"-Button:
+      <br/>
+      Den "ausgewählte Mail löschen"-Button klicken, um die ausgewählen Mails zu
+      löschen (um eine Mail zu auszuwählen muß die jeweilige Checkbox markiert
+      werden).</p>
+
+      <p>"neue Mail abrufen"-Button:
+      <br/>
+      Den "neue Mail abrufen"-Button klicken, um neue Nachrichten vom Server
+      abzurufen. Die Mailordner-Übersicht wird aktualisiert.</p>
+
+      <p>"neue Mail erstellen"-Button:
+      <br/>
+      Den "neue Mail erstellen"-Button klicken, um zur Seite "Neue Mail" zu
+      gelangen (weitere Infos hierzu in der "Neue Mail"-Dokumentation).</p>
+
+      <p>"Hilfe"-Button:
+      <br/>
+      Den "Hilfe"-Button klicken, um Hilfe für diesen Bildschirm zu erhalten.
+      Es wird genau diese Seite angezeigt ;-)</p>
+
+      <p>"logout"-Button:
+      <br/>
+      Den "logout"-Button klicken, um die aktuelle Session zu beenden. Alle
+      Informationen, die während der Session gesammelt wurden, werden sicher
+      verworfen.</p>
+
+      <p>"Ordner erstellen"-Button (nicht verfügbar beim POP3-Protokoll):
+      <br/>
+      Mit Klick auf den "Ordner erstellen"-Button wird ein neuer Unterordner
+      innerhalb des aktuellen Ordners erstellt. Der Name des zu erstellenden
+      Ordners muss in dem Textfeld über diesem Button angegeben werden. Sollte
+      dieser Button abgegraut sein, erlaubt der Mailbox-Server keine Erstellung
+      von Unterordnern innerhalb des akteullen Ordners.</p>
+
+      <p>"Ordner löschen"-Button (nicht verfügbar beim POP3-Protokoll):
+      <br/>
+      Mit Klick auf den "Ordner löschen"-Button wird der in der Dropdownliste
+      über diesem Button ausgewählte Unterordner gelöscht. Sollte dieser Button
+      abgegraut sein, erlaubt der Mailbox-Server keine Unterordner unterhalb des
+      aktuellen Ordners.</p>
+
+      <p>Betreff-Links:
+      <br/>
+      Jeder Nachrichten-Betreff ist mit einem Link zu der entsprechenden
+      "Einzelne Mail ansehen"-Seite ausgestattet. Dort kann die ausgewählte
+      Nachricht gelesen werden (weitere Infos hierzu in der "Einzelne Mail
+      ansehen"-Dokumentation).</p>
+
+      <p>Spalten-Köpfe:
+      <br/>
+      Die Sortierreihenfolge der angezeigten Nachrichten kann durch Klick auf
+      den jeweilen Spalten-Kopf geändert werden.</p>
+
+      <p>"Spamlevel"-Spalte:
+      <br/>
+      Wenn Spamassassin (http://spamassassin.apache.org/) auf dem Mailserver
+      installiert ist, wird dieses zu jeder Mail einen "X-Spam-Level"-Header
+      hinzufügen. Dieser zeigt den Spam-Pegel der jeweiligen Mail in Form eines
+      Asterisk-Zeichens (*) an. Weitere Informationen finden sich auf der
+      Spamassassin-Website. Wird in einer Mail kein "X-Spam-Level"-Header
+      gefunden, wird in dieser Spalte ein "[nicht gesetzt]" angezeigt.</p>
+
+      <p>"alles auswählen"-Button:
+      <br/>
+      Den "alles auswählen"-Button klicken, um alle Nachrichten auszuwählen
+      (alle Checkboxen werden markiert).</p>
+
+      <p>"Ausgewählte Nachrichten verschieben nach" (nicht verfügbar beim
+      POP3-Protokoll):
+      <br/>
+      Hier können die selektierten Nachrichten in einen anderen Ordner
+      verschoben werden. In der Dropdownliste den gewünschten Zielordner
+      auswählen und den "ausführen"-Button klicken.</p>
+    </section>
+
+  </body>
+
+</document>

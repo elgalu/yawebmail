@@ -1,0 +1,70 @@
+<document>
+
+  <properties>
+    <author email="stephan@lotk.de">Stephan Sann</author>
+    <title>Logon properties</title>
+  </properties>
+
+  <body>
+    <!-- The body of the document contains a number of sections -->
+    <section name="Logon properties">
+      If you are planning to provide yawebmail to a closed circle of users and
+      only want to use them a specific mail-server you can adjust the logon
+      properties in these ways:
+
+      <p>Port-numbers:
+      <br/>
+      The POP3- and IMAP-port-numbers yawebmail uses to connect.
+      </p>
+
+      <p>Preselected mailbox-host:
+      <br/>
+      Preselect a specific mailbox-host to connect to.
+      </p>
+
+      <p>Force preselected mailbox-host:
+      <br/>
+      Users will not be able to change the mailbox-host to connect to. The
+      preselected one will be enforced.
+      </p>
+
+      <p>Preselected mailbox-protocol:
+      <br/>
+      Preselect a specific mailbox-protocol to connect with.
+      </p>
+
+      <p>Force preselected mailbox-protocol:
+      <br/>
+      Users will not be able to change the mailbox-protocol to connect with. The
+      preselected one will be enforced.
+      </p>
+
+      <h4>Howto change logon properties</h4>
+
+      <ol>
+        <li>Deploy yawebmail.war</li>
+        <li>
+          Your Servlet-container will unpack the yawebmail.war into a normal
+          directory (Tomcat will create "TOMCAT_HOME/webapps/yawebmail/").
+        </li>
+        <li>
+          Change into the created directory. If you can't find it, undeploy the
+          WAR-file and unpack it by yourself ("jar -xf yawebmail.war").
+        </li>
+        <li>
+          Change into "WEB-INF/classes/de/lotk/yawebmail/properties/" and open
+          "logon.properties" with your favorite text-editor.
+        </li>
+        <li>
+          The settings within "logon.properties" are self-describing. Change
+          them to your desired values. Don't forget to save the changes.
+        </li>
+        <li>
+          Restart your Servlet-container (or re-pack and re-deploy your modified
+          WAR-file if you chose the "unpack yourself"-approach).
+        </li>
+      </ol>
+    </section>
+  </body>
+
+</document>

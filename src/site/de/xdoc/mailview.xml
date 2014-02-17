@@ -1,0 +1,72 @@
+<document>
+
+  <properties>
+    <author email="stephan@lotk.de">Stephan Sann</author>
+    <title>Benutzerdokumentation: Einzelne Mail ansehen</title>
+  </properties>
+
+  <body>
+    <!-- The body of the document contains a number of sections -->
+    <section name="Erklärung">
+      Auf dieser Seite wird eine einzelne Nachricht angezeigt.
+    </section>
+
+    <section name="Die GUI">
+      <img src="../images/screenshot_mailview.jpg" width="780" height="600"/>
+    </section>
+
+    <section name="Die Eingaben">
+      <p>"antworten"-Button:
+      <br/>
+      Den "antworten"-Button klicken, um auf die aktuelle Nachricht zu
+      antworten. Es wird auf die "Neue Mail"-Seite weitergeleitet (weitere Infos
+      hierzu in der "Neue Mail"-Dokumentation), deren AN- und Betreff-Felder
+      mit den entsprechenden Werten der aktuellen eMail vorbefüllt werden.</p>
+
+      <p>"Mail weiterleiten"-Button:
+      <br/>
+      Den "Mail weiterleiten"-Button klicken, um die aktuelle Nachricht
+      weiterzuleiten. Es wird auf die "Neue Mail"-Seite weitergeleitet (weitere
+      Infos hierzu in der "Neue Mail"-Dokumentation), dessen Betreff-Feld mit
+      dem entsprechenden Wert der aktuellen eMail vorbefüllt wird. Außerdem wird
+      die aktuelle Nachricht als eMail-Anhang an die neue eMail angehängt.</p>
+
+      <p>"Nachrichtenquelltext ansehen"-Button:
+      <br/>
+      Den "Nachrichtenquelltext ansehen"-Button klicken, um den
+      Nachrichtenquelltext der aktuellen Nachricht anzusehen (weitere Infos
+      hierzu in der "Nachrichtenquelltext"-Dokumentation).</p>
+
+      <p>"Mail löschen"-Button:
+      <br/>
+      Den "Mail löschen"-Button klicken, um die aktuelle Nachricht vom
+      eMail-Konto zu löschen.</p>
+
+      <p>"zurück zur Übersicht"-Button:
+      <br/>
+      Den "zurück zur Übersicht"-Button klicken, um zurück zur Seite
+      Mailordner-Übersicht zu gelangen (weitere Infos hierzu in der
+      "Mailordner-Übersicht"-Dokumentation).</p>
+
+      <p>"Hilfe"-Button:
+      <br/>
+      Den "Hilfe"-Button klicken, um Hilfe für diesen Bildschirm zu erhalten.
+      Es wird genau diese Seite angezeigt ;-)</p>
+
+      <p>"logout"-Button:
+      <br/>
+      Den "logout"-Button klicken, um die aktuelle Session zu beenden. Alle
+      Informationen, die während der Session gesammelt wurden, werden sicher
+      verworfen.</p>
+
+      <p>Anzeige der Nachricht:
+      <br/>
+      "Plain-Text"-Nachrichten werden direkt auf dieser Seite angezeigt. Für
+      Nachrichten-Texte in HTML wird ein Link angeboten. Ein Klick auf diesen
+      Link öffnet den HTML-Teil in einem separaten Fenster. Bild-Anhänge (im
+      GIF-, JP(e)G- und PNG-Format) werden auf der aktuellen Seite angezeigt.
+      Alle anderen Anhänge sind über einen angebotenen Link erreichbar.</p>
+    </section>
+  </body>
+
+</document>

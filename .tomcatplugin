@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tomcatProjectProperties>
+    <rootDir>/src/main/webapp</rootDir>
+    <exportSource>false</exportSource>
+    <reloadable>true</reloadable>
+    <redirectLogger>false</redirectLogger>
+    <updateXml>true</updateXml>
+    <warLocation></warLocation>
+    <extraInfo></extraInfo>
+    <webPath>/yawebmail</webPath>
+    <webClassPathEntries>
+        <webClassPathEntry>/yawebmail_faces/eclipse-classes</webClassPathEntry>
+        <webClassPathEntry>C:/Projects/Local_Repository/com/sun/mail/dsn/1.4/dsn-1.4.jar</webClassPathEntry>
+        <webClassPathEntry>C:/Projects/Local_Repository/com/sun/mail/imap/1.4/imap-1.4.jar</webClassPathEntry>
+        <webClassPathEntry>C:/Projects/Local_Repository/com/sun/mail/pop3/1.4/pop3-1.4.jar</webClassPathEntry>
+        <webClassPathEntry>C:/Projects/Local_Repository/com/sun/mail/smtp/1.4/smtp-1.4.jar</webClassPathEntry>
+        <webClassPathEntry>C:/Projects/Local_Repository/commons-beanutils/commons-beanutils/1.7.0/commons-beanutils-1.7.0.jar</webClassPathEntry>
+        <webClassPathEntry>C:/Projects/Local_Repository/commons-codec/commons-codec/1.3/commons-codec-1.3.jar</webClassPathEntry>
+        <webClassPathEntry>C:/Projects/Local_Repository/commons-collections/commons-collections/3.2/commons-collections-3.2.jar</webClassPathEntry>
+        <webClassPathEntry>C:/Projects/Local_Repository/commons-digester/commons-digester/1.8/commons-digester-1.8.jar</webClassPathEntry>
+        <webClassPathEntry>C:/Projects/Local_Repository/commons-discovery/commons-discovery/0.4/commons-discovery-0.4.jar</webClassPathEntry>
+        <webClassPathEntry>C:/Projects/Local_Repository/commons-el/commons-el/1.0/commons-el-1.0.jar</webClassPathEntry>
+        <webClassPathEntry>C:/Projects/Local_Repository/commons-fileupload/commons-fileupload/1.2/commons-fileupload-1.2.jar</webClassPathEntry>
+        <webClassPathEntry>C:/Projects/Local_Repository/commons-io/commons-io/1.3.2/commons-io-1.3.2.jar</webClassPathEntry>
+        <webClassPathEntry>C:/Projects/Local_Repository/commons-lang/commons-lang/2.3/commons-lang-2.3.jar</webClassPathEntry>
+        <webClassPathEntry>C:/Projects/Local_Repository/commons-logging/commons-logging/1.1/commons-logging-1.1.jar</webClassPathEntry>
+        <webClassPathEntry>C:/Projects/Local_Repository/javax/activation/activation/1.1/activation-1.1.jar</webClassPathEntry>
+        <webClassPathEntry>C:/Projects/Local_Repository/javax/mail/mail-api/1.4/mail-api-1.4.jar</webClassPathEntry>
+        <webClassPathEntry>C:/Projects/Local_Repository/javax/servlet/jstl/1.1.0/jstl-1.1.0.jar</webClassPathEntry>
+        <webClassPathEntry>C:/Projects/Local_Repository/junit/junit/3.8.1/junit-3.8.1.jar</webClassPathEntry>
+        <webClassPathEntry>C:/Projects/Local_Repository/myfaces/myfaces-api/1.1.5/myfaces-api-1.1.5.jar</webClassPathEntry>
+        <webClassPathEntry>C:/Projects/Local_Repository/myfaces/myfaces-impl/1.1.5/myfaces-impl-1.1.5.jar</webClassPathEntry>
+        <webClassPathEntry>C:/Projects/Local_Repository/myfaces/tomahawk/1.1.6/tomahawk-1.1.6.jar</webClassPathEntry>
+        <webClassPathEntry>C:/Projects/Local_Repository/org/gnu/inet/libidn/0.6.7/libidn-0.6.7.jar</webClassPathEntry>
+        <webClassPathEntry>C:/Projects/Local_Repository/oro/oro/2.0.8/oro-2.0.8.jar</webClassPathEntry>
+        <webClassPathEntry>org.maven.ide.eclipse.MAVEN2_CLASSPATH_CONTAINER</webClassPathEntry>
+    </webClassPathEntries>
+</tomcatProjectProperties>

@@ -1,0 +1,66 @@
+<document>
+
+  <properties>
+    <author email="stephan@lotk.de">Stephan Sann</author>
+    <title>Video-howtos</title>
+  </properties>
+
+  <body>
+
+    <!-- The body of the document contains a number of sections -->
+    <section name="The videos on this page were created by...">
+
+      <a href="http://www.demorecorder.com/" target="_blank">
+        <img src="videos/demorecorder-logo.gif" width="250" height="94"/>
+      </a>
+      <a href="http://www.demorecorder.com/"
+              target="_blank">http://www.demorecorder.com/</a>
+    </section>
+
+    <section name="Select messages with the mouse">
+
+      <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000"
+              codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,0,0" 
+	          width="820" height="680" id="DemoRecorderFLVPlayer2" align="middle">
+
+        <param name="allowScriptAccess" value="sameDomain"/>
+	    <param name="movie" 
+                value="videos/select.swf?w=820&amp;h=680&amp;autoplay=off&amp;autorepeat=off&amp;controller=on&amp;video=select.flv"/>
+        <param name="loop" value="false"/>
+        <param name="quality" value="high"/>
+        <param name="bgcolor" value="#ffffff"/>
+
+        <embed loop="false" quality="high" bgcolor="#ffffff"
+                src="videos/select.swf?w=820&amp;h=680&amp;autoplay=off&amp;autorepeat=off&amp;controller=on&amp;video=select.flv"
+                width="820" height="680" name="DemoRecorderFLVPlayer1"
+                align="middle" allowScriptAccess="sameDomain"
+                type="application/x-shockwave-flash" 
+                pluginspage="http://www.macromedia.com/go/getflashplayer"/>
+      </object>
+    </section>
+
+    <section name="Move messages via drag&amp;drop">
+
+      <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000"
+              codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,0,0" 
+	          width="820" height="680" id="DemoRecorderFLVPlayer2" align="middle">
+
+        <param name="allowScriptAccess" value="sameDomain"/>
+	    <param name="movie" 
+                value="videos/move-messages.swf?w=820&amp;h=680&amp;autoplay=off&amp;autorepeat=off&amp;controller=on&amp;video=move-messages.flv"/>
+        <param name="loop" value="false"/>
+        <param name="quality" value="high"/>
+        <param name="bgcolor" value="#ffffff"/>
+
+        <embed loop="false" quality="high" bgcolor="#ffffff"
+                src="videos/move-messages.swf?w=820&amp;h=680&amp;autoplay=off&amp;autorepeat=off&amp;controller=on&amp;video=move-messages.flv"
+                width="820" height="680" name="DemoRecorderFLVPlayer2"
+                align="middle" allowScriptAccess="sameDomain"
+                type="application/x-shockwave-flash" 
+                pluginspage="http://www.macromedia.com/go/getflashplayer"/>
+      </object>
+    </section>
+
+  </body>
+
+</document>

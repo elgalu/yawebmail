@@ -1,0 +1,140 @@
+<document>
+
+  <properties>
+    <author email="stephan@lotk.de">Stephan Sann</author>
+    <title>User-documentation: Create new mail</title>
+  </properties>
+
+  <body>
+    <!-- The body of the document contains a number of sections -->
+    <section name="Description">
+      On this page you can create a new message.
+    </section>
+
+    <section name="The GUI">
+      <img src="images/screenshot_new_mail.jpg" width="780" height="600"/>
+      <br/><br/><br/>
+
+      Depending on how the administrator configured yawebmail, there are
+      three possible appearances:
+      <br/><br/>
+
+      <a name="config1">Configuration 1</a>:
+      <br/>
+      <img src="images/smtpHostChoice_free.gif" width="440" height="51"/>
+      <br/>
+      (free choice of SMTP-host)
+      <br/><br/>
+
+      <a name="config2">Configuration 2</a>:
+      <br/>
+      <img src="images/smtpHostChoice_domain.gif" width="440" height="51"/>
+      <br/>
+      (free choice of SMTP-host within the domain of the mailbox-server)
+      <br/><br/>
+
+      <a name="config3">Configuration 3</a>:
+      <br/>
+      <img src="images/smtpHostChoice_none.gif" width="440" height="51"/>
+      <br/>
+      (no choice of SMTP-host (host set by administrator))
+    </section>
+
+    <section name="The input">
+      <p>SmtpServer / Port (not available in <a href="#config3">configuration
+      3</a>):
+      <br/>
+      Fill in the hostname and port of the SMTP-server which shall be used to
+      process the transport of the message. In <a href="#config2">configuration
+      2</a> you are limited to chose the SMTP-subdomain-prefix (optional), the
+      domain will be taken from your mailbox-login. If you don't know the
+      hostname and/or port of your SMTP-server please ask your
+      eMail-account-provider.
+      </p>
+
+      <p>Auth: User / Pass:
+      <br/>
+      Just in case you SMTP-server needs authorisation, fill in your username
+      and password. Otherwise leave blank. If you're not sure try to omit this
+      input first. In case this doesn't work for you, ask your
+      eMail-account-provider.</p>
+
+      <p>"SSL"-Checkbox:
+      <br/>
+      Activate this checkbox if you want to send your mail over a
+      SSL-connection. This must be supported by the according SMTP-Server (if
+      you're not sure about this, ask your eMail-account-provider). The default
+      TCP-IP port for SMTP-SSL-connections is 465.</p>
+
+      <p>"TLS"-Checkbox:
+      <br/>
+      Activate this checkbox if you want to send your mail over a
+      TLS-connection. This must be supported by the according SMTP-Server (if
+      you're not sure about this, ask your eMail-account-provider). The default
+      TCP-IP port for SMTP-TLS-connections is 587.</p>
+
+      <p>From:
+      <br/>
+      Fill in your own eMail-Address. Be aware that some SMTP-servers will check
+      if the given eMail-Address matches to the used SMTP-Auth-user (if used).
+      Furthermore keep an eye on typing errors. If your SMTP-server doesn't
+      check the from-address, you will get no response-mails if you got a typo
+      in this.</p>
+
+      <p>To:
+      <br/>
+      Fill in the eMail-Address of the recipient. Separate multiple recipients
+      with commas.</p>
+
+      <p>CC:
+      <br/>
+      Fill in the eMail-Address of the carbon-copy-recipient. Separate multiple
+      carbon-copy-recipients with commas.</p>
+
+      <p>BCC:
+      <br/>
+      Fill in the eMail-Address of the blind-carbon-copy-recipient. Separate
+      multiple blind-carbon-copy-recipients with commas.</p>
+
+      <p>Subject:
+      <br/>
+      Fill in the subject of the eMail.</p>
+
+      <p>File-attachments:
+      <br/>
+      If you would like to attach files to the eMail, you got to browse your
+      local file-system for the file and click "upload file" to transfer the
+      file to yawebmail for each attachment.</p>
+
+      <p>eMail-Text:
+      <br/>
+      Fill in the message-content in plain text.</p>
+
+      <p>"send mail"-button:
+      <br/>
+      Push the "send mail"-button to send the mail. You will be forwarded to the
+      "Mailfolder overview"-page.</p>
+
+      <p>"reset"-button:
+      <br/>
+      Push the "reset"-button to delete all message-related inputs and start
+      over again.</p>
+
+      <p>"cancel"-button:
+      <br/>
+      Push the "cancel"-button to quit message-creation and return to the
+      "Mailfolder overview"-page.</p>
+
+      <p>"help"-button:
+      <br/>
+      Push the "help"-button to get help for this screen. Actually you will see
+      this page ;-)</p>
+
+      <p>"logout"-button:
+      <br/>
+      Push the "logout"-button to log out from the current session.
+      All informations collected during the session will be discarded.</p>
+    </section>
+  </body>
+
+</document>

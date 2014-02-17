@@ -1,0 +1,43 @@
+<document>
+
+  <properties>
+    <author email="stephan@lotk.de">Stephan Sann</author>
+    <title>User-documentation: View message source</title>
+  </properties>
+
+  <body>
+    <!-- The body of the document contains a number of sections -->
+    <section name="Description">
+      On this page you can the raw source of a message.
+    </section>
+
+    <section name="The GUI">
+      <img src="images/screenshot_message_source.jpg" width="780" height="600"/>
+    </section>
+
+    <section name="The input">
+      <p>"back to mail"-button:
+      <br/>
+      Push the "back to mail"-button to get back to the
+      "View single message"-page (check the "View single message"-documentation
+      to get further informations).</p>
+
+      <p>"back to summary"-button:
+      <br/>
+      Push the "back to summary"-button to get back to the
+      "Mailfolder overview"-page (check the "Mailfolder overview"-documentation
+      to get further informations).</p>
+
+      <p>"help"-button:
+      <br/>
+      Push the "help"-button to get help for this screen. Actually you will see
+      this page ;-)</p>
+
+      <p>"logout"-button:
+      <br/>
+      Push the "logout"-button to log out from the current session.
+      All informations collected during the session will be discarded.</p>
+    </section>
+  </body>
+
+</document>

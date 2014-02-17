@@ -1,0 +1,71 @@
+<!DOCTYPE document PUBLIC "-//Apache Software Foundation//DTD XDOC 1.0//EN"
+        "http://maven.apache.org/dtd/xdoc_1_0.dtd" [
+
+                <!ENTITY #x00E5 "&amp;#x00E5;">
+                <!ENTITY #x0107 "&amp;#x0107;">
+                <!ENTITY #26753 "&amp;#26753;">
+                <!ENTITY #27850 "&amp;#27850;">
+                <!ENTITY #x00ed "&amp;#x00ed;">
+        ]>
+
+<document>
+
+  <properties>
+    <author email="stephan@lotk.de">Stephan Sann</author>
+    <title>Special thanks</title>
+  </properties>
+
+  <body>
+    <!-- The body of the document contains a number of sections -->
+    <section name="Special thanks">
+      Special thanks go to:
+
+      <p>Tomasz Stanczak:
+      <br/>
+      For giving a lot of advices (not only on yawebmail).
+      </p>
+
+      <p>Bill Shannon (bshannon from
+      <a href="http://forum.java.sun.com/forum.jspa?forumID=43"
+              target="_blank">JavaMail-forum</a>):
+      <br/>
+      For pointing out some ingenious soluions for JavaMail-problems.
+      </p>
+
+      <p>Marco Martin (mart from <a href="http://www.notmart.org/"
+              target="_blank">http://www.notmart.org/</a>):
+      <br/>
+      For the nifty icons used in yawebmail
+      (<a href="http://www.kde-look.org/content/show.php/Glaze?content=23966"
+              target="_blank">Glaze on KDE-LOOK.org</a>).
+      </p>
+
+      <p>All developers of
+      <a href="http://java.sun.com/products/javamail/"
+              target="_blank">JavaMail</a>:
+      <br/>
+      For providing this very helpful framework.
+      </p>
+
+      <p>All translators of yawebmail:
+      <br/>
+      Daria Sann (russian), H&#x00E5;kan Andersson (swedish), Vin&#x00ed;cius
+      Oliveira Janones (esperanto and portuguese), Po Liang (&#26753;&#27850;)
+      (chinese), Vincenzo Martiello (italian), Ivan Petrovi&#x0107; (serbian),
+      Victor Sanchez (spanish) and Tomasz Stanczak (polish)
+      </p>
+
+      <p>Christian Linhart (Maintainer of the
+      <a href="http://www.demorecorder.com/" target="_blank">DemoRecorder</a>):
+      <br/>
+      For the donation of a DemoRecorder-licence.
+      </p>
+
+      <p>Luke Schemonia:
+      <br/>
+      For experimentation and feedback on IMAP-functionality.
+      </p>
+    </section>
+  </body>
+
+</document>

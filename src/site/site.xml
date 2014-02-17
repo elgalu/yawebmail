@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<project name="yawebmail">
+
+  <bannerLeft>
+    <src>images/logo.png</src>
+  </bannerLeft>
+
+  <bannerRight>
+    <src>images/banner_right.gif</src>
+  </bannerRight>
+
+  <poweredBy>
+    <logo name="Support this project" href="https://sourceforge.net/donate/index.php?group_id=131110"
+            img="images/project-support.jpg"/>
+    <logo name="Build with Maven 2" href="http://maven.apache.org"
+            img="images/logos/maven-feather.png"/>
+  </poweredBy>
+
+  <body>
+    <links>
+      <item name="deutsch (german)" href="de/index.html"
+              img="images/yes_16x16.png" hideName="true"/>
+    </links>
+
+    <menu name="About">
+      <item name="Introduction" href="index.html"/>
+      <item name="Screenshots" href="screenshots.html"/>
+      <item name="FAQ" href="faq.html"/>
+      <item name="Special thanks" href="special_thanks.html"/>
+    </menu>
+
+    <menu name="Interactive">
+      <item name="Test drive" href="https://www.openwebtools.org/yawebmail/"/>
+      <item name="Forum" href="http://sourceforge.net/forum/?group_id=131110"/>
+      <item name="Support requests"
+              href="http://sourceforge.net/tracker/?group_id=131110&amp;atid=720100"/>
+      <item name="Feature Requests"
+              href="http://sourceforge.net/tracker/?group_id=131110&amp;atid=720102"/>
+      <item name="Bug reports"
+              href="http://sourceforge.net/tracker/?group_id=131110&amp;atid=720099"/>
+    </menu>
+
+    <menu name="Admin documentation">
+      <item name="Logon properties" href="logon_properties.html"/>
+      <item name="SMTP properties" href="smtp_properties.html"/>
+      <item name="Add language" href="add_language.html"/>
+    </menu>
+
+    <menu name="User documentation">
+      <item name="Logon" href="logon.html"/>
+      <item name="Check certificate" href="check_cert.html"/>
+      <item name="Mailfolder overview" href="overview.html"/>
+      <item name="View single message" href="mailview.html"/>
+      <item name="View message source" href="message_source.html"/>
+      <item name="Create new mail" href="new_mail.html"/>
+      <item name="Glossary" href="glossary.html"/>
+      <item name="Video-howtos" href="video_howtos.html"/>
+    </menu>
+
+    <menu name="Project info">
+      <item name="Summary" href="project-summary.html"/>
+      <item name="Dependencies" href="dependencies.html"/>
+      <item name="The Team" href="team-list.html"/>
+      <item name="Source Repository" href="source-repository.html"/>
+      <item name="Project License" href="license.html"/>
+    </menu>
+
+    <menu name="&quot;ya&quot;-webtools on SF">
+      <item name="yawebmail" href="http://sourceforge.net/projects/yawebmail/"/>
+      <item name="yawebftp" href="http://sourceforge.net/projects/yawebftp/"/>
+      <item name="yajamesmanager"
+              href="http://sourceforge.net/projects/yajamesmanager/"/>
+    </menu>
+
+    <!--
+    <menu name="Security and Trustability">
+      <item name="Preface" href="gpg_preface.html"/>
+      <item name="Signature and encryption" href="gpg_encrypt.html"/>
+      <item name="Verification and decryption" href="gpg_decrypt.html"/>
+    </menu>
+    -->
+  </body>
+</project>

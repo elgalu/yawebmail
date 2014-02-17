@@ -1,0 +1,16 @@
+<document>
+
+  <properties>
+    <author email="stephan@lotk.de">Stephan Sann</author>
+    <title>Security and Trustability: Verification and decryption</title>
+  </properties>
+
+  <body>
+    <!-- The body of the document contains a number of sections -->
+    <section name="Description">
+      See how to verify signed and decrypt encrypted messages. Make sure to read
+      the <a href="gpg_preface.html">preface</a> first.
+    </section>
+  </body>
+
+</document>

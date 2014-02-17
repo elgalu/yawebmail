@@ -1,0 +1,74 @@
+<document>
+
+  <properties>
+    <author email="stephan@lotk.de">Stephan Sann</author>
+    <title>User-documentation: View single message</title>
+  </properties>
+
+  <body>
+    <!-- The body of the document contains a number of sections -->
+    <section name="Description">
+      On this page you can get granular on a single message.
+    </section>
+
+    <section name="The GUI">
+      <img src="images/screenshot_mailview.jpg" width="780" height="600"/>
+    </section>
+
+    <section name="The input">
+      <p>"reply"-button:
+      <br/>
+      Push the "reply"-button to reply to the present message. You'll be
+      forwarded to the "create new mail"-page (check the
+      "create new mail"-documentation to get further informations), which's TO-
+      and Subject-fields will be filled with the appropriate values from the
+      present message.</p>
+
+      <p>"forward mail"-button:
+      <br/>
+      Push the "forward mail"-button to forward the present message. You'll be
+      forwarded to the "create new mail"-page (check the
+      "create new mail"-documentation to get further informations), which's
+      Subject-field will be filled with the appropriate value from the
+      present message. Furthermore, the present message will be attached as an
+      eMail-attachment to the new message.</p>
+
+      <p>"view message source"-button:
+      <br/>
+      Push the "view message source"-button to see the source code of the
+      present message. Check the "view message source"-documentation to get
+      further informations.</p>
+
+      <p>"delete mail"-button:
+      <br/>
+      Push the "delete mail"-button to delete the present message from your
+      mailbox-server.</p>
+
+      <p>"back to summary"-button:
+      <br/>
+      Push the "back to summary"-button to get back to the
+      "Mailfolder overview"-page (check the "Mailfolder overview"-documentation
+      to get further informations).</p>
+
+      <p>"help"-button:
+      <br/>
+      Push the "help"-button to get help for this screen. Actually you will see
+      this page ;-)</p>
+
+      <p>"logout"-button:
+      <br/>
+      Push the "logout"-button to log out from the current session.
+      All informations collected during the session will be discarded.</p>
+
+      <p>Message presentation:
+      <br/>
+      Plain-text parts of the message will we displayed directly on this page.
+      For message-text in HTML a link will be provided. Following this link, the
+      HTML-message part will be displayed in a separate window.
+      Image-attachtments (GIF-, JP(e)G- and PNG-format) will be shown on the
+      present page. All other attachments are accessible via a provided
+      link.</p>
+    </section>
+  </body>
+
+</document>

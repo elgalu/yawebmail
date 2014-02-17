@@ -1,0 +1,68 @@
+<document>
+
+  <properties>
+    <author email="stephan@lotk.de">Stephan Sann</author>
+    <title>SMTP Eigenschaften</title>
+  </properties>
+
+  <body>
+    <!-- The body of the document contains a number of sections -->
+    <section name="SMTP Eigenschaften">
+      Über die SMTP Eigenschaften kann gesteuert werden, mit welche(n)
+      SMTP-Server(n) sich der User verbinden darf. Eine Limitierung der Auswahl
+      kann verhindern, dass User Spam über den Applikations-Server senden. 
+
+      <p>SMTP-Host-Auswahl "frei":
+      <br/>
+      Der User darf sich mit einem beliebigen SMTP-Server verbinden um seine
+      Mail zu versenden. Diese Einstellung sollte mit Bedacht eingesetzt werden,
+      da User den Applikations-Server in dieser Konfiguration für den Versand
+      von Spam missbrauchen könnten.
+      </p>
+
+      <p>SMTP-Host-Auswahl "Domain" (default):
+      <br/>
+      Der User darf sich mit einem SMTP-Server innerhalb der Domain des
+      Mailbox-Hosts verbinden (wenn z.B. der Mailbox-Host des Users
+      "pop.domain.tld" lautet, kann dieser einen SMTP-Server innerhalb der
+      Domain "domain.tld" auswählen). Dies reduziert die Chance des Users Spam
+      zu versenden deutlich.
+      </p>
+
+      <p>SMTP-Host-Auswahl "keine":
+      <br/>
+      Der User kann nur den voreingestellten SMTP-Host verwenden. Mit dieser
+      Einstellung müssen auch die Properties "forced_smtp_host_name" und
+      "forced_smtp_host_port" gesetzt werden.
+      </p>
+
+      <h4>Wie die SMTP-Eigenschaften ändern?</h4>
+
+      <ol>
+        <li>yawebmail.war deployen</li>
+        <li>
+          Der Servlet-Container entpackt yawebmail.war in ein normales
+          Verzeichnis (Tomcat wird "TOMCAT_HOME/webapps/yawebmail/" erstellen).
+        </li>
+        <li>
+          In das erstellte Verzeichnis wechseln. Ist dieses nicht auffindbar,
+          das WAR-File un-deployen und selbst entpacken ("jar -xf
+          yawebmail.war").
+        </li>
+        <li>
+          In "WEB-INF/classes/de/lotk/yawebmail/properties/" wechseln und die
+          Datei "smtp.properties" in einem text-editor öffnen.
+        </li>
+        <li>
+          Die Einstellungen in "smtp.properties" sind selbsterklärend. Diese
+          auf die gewünschten Werte ändern und nicht vergessen zu speichern.
+        </li>
+        <li>
+          Servlet-container neu starten (oder das Verzeichnis erneut packen und
+          wieder deployen, wenn selbst entpackt wurde).
+        </li>
+      </ol>
+    </section>
+  </body>
+
+</document>

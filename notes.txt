@@ -1,0 +1,14 @@
+native2ascii on Win
+===================
+native2ascii -encoding UTF-8 view_ru.properties.org > view_ru.properties
+
+reverse:
+native2ascii -reverse -encoding UTF-8 view_ru.properties > view_ru.properties.org
+
+
+Tomcat-plugin
+=============
+- Doesn't work seamless with Maven-dependencies!
+  -> Adjust DevLoader-classpath (project-properties|Tomcat|DevLoader) on each system.
+- Tomcat needs DevLoader-classes from Tomcat-plugin
+  -> Copy "#tomcat-plugin-dir#/DevLoader.zip" to "#tomcat-dir#/lib/DevLoader.jar" (zip -> jar)
