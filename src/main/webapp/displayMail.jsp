@@ -242,7 +242,7 @@
             </h:commandLink>
             --%>
 
-            <h:outputLink target="_blank"
+            <h:outputLink target=""
                     value="#{facesContext.externalContext.requestContextPath}/retrieveDisplayPartContentServlet.svl">
 
               <f:param name="partNumber" value="#{partRowIndex}"/>
