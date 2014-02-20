@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite failures="0" time="0.052" errors="0" skipped="0" tests="4" name="de.lotk.yawebmail.application.TestYawebmailVersion">
+<testsuite failures="0" time="0.041" errors="0" skipped="0" tests="4" name="de.lotk.yawebmail.application.TestYawebmailVersion">
   <properties>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64"/>
@@ -58,8 +58,8 @@
     <property name="sun.desktop" value="gnome"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase time="0.015" classname="de.lotk.yawebmail.application.TestYawebmailVersion" name="testGetInstance"/>
+  <testcase time="0.027" classname="de.lotk.yawebmail.application.TestYawebmailVersion" name="testGetInstance"/>
+  <testcase time="0.007" classname="de.lotk.yawebmail.application.TestYawebmailVersion" name="testCompareTo"/>
+  <testcase time="0" classname="de.lotk.yawebmail.application.TestYawebmailVersion" name="testToString"/>
   <testcase time="0" classname="de.lotk.yawebmail.application.TestYawebmailVersion" name="testToSimpleString"/>
-  <testcase time="0" classname="de.lotk.yawebmail.application.TestYawebmailVersion" name="testCompareTo"/>
-  <testcase time="0.001" classname="de.lotk.yawebmail.application.TestYawebmailVersion" name="testToString"/>
 </testsuite>

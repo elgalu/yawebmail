@@ -165,8 +165,9 @@ public class PresentationUtils {
 
     StringBuffer regExpr = new StringBuffer();
     regExpr.append("s#").append(HTTP_URL_REGEXPR).append("#<a href=\"");
-    regExpr.append(request.getContextPath());
-    regExpr.append("/dereferServlet.svl?$1\" target=\"_blank\">$1</a>#gi");
+    // regExpr.append(request.getContextPath());
+    // regExpr.append("/dereferServlet.svl?$1\">$1</a>#gi");
+    regExpr.append("$1\">$1</a>#gi");
 
     return(perl5Util.substitute(regExpr.toString(), partContent));
   }
@@ -183,8 +184,9 @@ public class PresentationUtils {
 
     StringBuffer regExpr = new StringBuffer();
     regExpr.append("s#(<\\s*a[^>]*href\\s*=\\s*\")(.*?)(\".*?>)#$1");
-    regExpr.append(request.getContextPath());
-    regExpr.append("/dereferServlet.svl?$2$3#gi");
+    // regExpr.append(request.getContextPath());
+    // regExpr.append("/dereferServlet.svl?$2$3#gi");
+    regExpr.append("$2$3#gi");
 
     return(perl5Util.substitute(regExpr.toString(), partContent));
   }
