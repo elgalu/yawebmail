@@ -58,7 +58,7 @@ public class LoginDataBean implements Lifecycle, Serializable {
 
 
   /** Arbeiten wir mit erweiterten Logon-Properties? */
-  private boolean advancedLogonProperties = false;
+  private boolean advancedLogonProperties = true;
 
 
   // ------------------------------------------------- statische Initialisierung
@@ -121,11 +121,8 @@ public class LoginDataBean implements Lifecycle, Serializable {
 
     // Wenn wir uns NICHT im "Advanced mode" befinden, passen wir auch gleich
     // den Port an
-    if(! this.advancedLogonProperties) {
-
-      this.mailboxPort =
-              ((Integer)protocolPorts.get(mailboxProtocol)).intValue();
-    }
+    this.mailboxPort =
+            ((Integer)protocolPorts.get(mailboxProtocol)).intValue();
   }
 
   /**
@@ -195,7 +192,7 @@ public class LoginDataBean implements Lifecycle, Serializable {
   public void reset() {
 
     // Defaultmaessig befinden wir uns nicht im "Advanced mode"
-    this.advancedLogonProperties = false;
+    this.advancedLogonProperties = true;
 
     // Protocol und Port zuruecksetzen
     this.setMailboxProtocol(MailboxProtocolEnum.byProtocolId(Configuration.getPreselectionMailboxProtocol()));
