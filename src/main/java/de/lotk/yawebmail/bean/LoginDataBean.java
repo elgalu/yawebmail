@@ -84,6 +84,7 @@ public class LoginDataBean implements Lifecycle, Serializable {
    */
   public LoginDataBean() {
 
+    this.advancedLogonProperties = true;
     // Einmalig "setMailboxProtocol" aufrufen, damit der Port gesetzt wird.
     this.setMailboxProtocol(MailboxProtocolEnum.byProtocolId(Configuration.getPreselectionMailboxProtocol()));
   }

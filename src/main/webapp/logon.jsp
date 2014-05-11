@@ -72,19 +72,19 @@
           <h:panelGroup>
             <h:selectOneMenu id="mailboxProtocol"
                     value="#{loginDataBean.mailboxProtocol}"
-                    disabled="#{! logonController.editableMailboxProtocol}">
+                    disabled="#{false}">
               <f:selectItems
                       value="#{choicesRetriever.mailboxProtocolChoices}"/>
             </h:selectOneMenu> 
             <h:message for="mailboxProtocol" errorClass="errorText"/>
             <h:commandLink styleClass="undecoratedLink" immediate="true"
                     action="#{logonController.configureAdvancedLogonProperties}"
-                    rendered="#{(! loginDataBean.advancedLogonProperties) && logonController.editableMailboxProtocol}">
+                    rendered="#{false}">
               <h:graphicImage alt="configure"
                       url="/static/images/configure_16_16.png"/>
             </h:commandLink>
             <h:inputText id="mailboxPort" value="#{loginDataBean.mailboxPort}"
-                    rendered="#{loginDataBean.advancedLogonProperties}"
+                    rendered="#{true}"
                     styleClass="smallInputField">
               <f:validateLongRange minimum="1" maximum="65535"/>
             </h:inputText>

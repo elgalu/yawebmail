@@ -12,7 +12,7 @@
 
     // Redirect to login page
     setTimeout(function() {
-        window.location.replace('/yawebmail');
+        window.location.replace('/yawebmail/');
     }, 100);
 </script>
 
