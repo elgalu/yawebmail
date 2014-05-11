@@ -192,6 +192,10 @@
       <to-view-id>/logon.jsp</to-view-id>
     </navigation-case>
     <navigation-case>
+      <from-outcome>logout</from-outcome>
+      <to-view-id>/logout.jsp</to-view-id>
+    </navigation-case>
+    <navigation-case>
       <from-outcome>mailsListing</from-outcome>
       <to-view-id>/mailsListing.jsp</to-view-id>
     </navigation-case>
