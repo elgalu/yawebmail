@@ -59,7 +59,7 @@
                         value="#{viewProperties.button_delete_mail}"/>
               </h:commandLink>
 
-              <h:commandLink styleClass="undecoratedLink" action="mailsListing">
+              <h:commandLink styleClass="undecoratedLink backToSummaryCommandLink" action="mailsListing">
                 <h:graphicImage alt="summary" url="/static/images/summary.png"/>
                 <h:outputText styleClass="buttonTexts"
                         value="#{viewProperties.button_back_to_summary}"/>
@@ -242,7 +242,7 @@
             </h:commandLink>
             --%>
 
-            <h:outputLink target=""
+            <h:outputLink target="" styleClass="openHtmlMailLink"
                     value="#{facesContext.externalContext.requestContextPath}/retrieveDisplayPartContentServlet.svl">
 
               <f:param name="partNumber" value="#{partRowIndex}"/>

@@ -25,7 +25,7 @@
             <%-- Mail-Aktionen --%>
             <h:panelGroup>
 
-              <h:commandLink styleClass="undecoratedLink"
+              <h:commandLink styleClass="undecoratedLink deleteSelectedMailsCommandLink"
                       id="deleteSelectedMails"
                       action="#{mailsListingController.deleteSelectedMails}">
                 <h:graphicImage alt="delete" url="/static/images/delete.png"/>
@@ -33,7 +33,7 @@
                         value="#{viewProperties.button_delete_selected_mails}"/>
               </h:commandLink>
 
-              <h:commandLink styleClass="undecoratedLink"
+              <h:commandLink styleClass="undecoratedLink checkForNewMailCommandLink"
                       action="#{mailsListingController.checkForNewMail}">
                 <h:graphicImage alt="get new mail"
                         url="/static/images/get-new-mail.png"/>
@@ -41,7 +41,7 @@
                         value="#{viewProperties.button_check_for_new_mail}"/>
               </h:commandLink>
 
-              <h:commandLink styleClass="undecoratedLink"
+              <h:commandLink styleClass="undecoratedLink createMailCommandLink"
                       action="createMail">
                 <h:graphicImage alt="create new mail"
                         url="/static/images/create-new-mail.png"/>
@@ -62,7 +62,7 @@
                         value="#{viewProperties.button_help}"/>
               </h:outputLink>
 
-              <h:commandLink styleClass="undecoratedLink"
+              <h:commandLink styleClass="undecoratedLink logoutCommandLink"
                       action="#{logoutController.logout}">
                 <h:graphicImage alt="logout"
                         url="/static/images/logout.png"/>
@@ -179,8 +179,8 @@
                 </h:commandLink>
               </f:facet>
               <h:selectBooleanCheckbox value="#{dMessage.selected}"
-                      styleClass="checkBox"/>
-              <h:commandLink styleClass="messageLink"
+                      styleClass="checkBox selectMessageCheckBox"/>
+              <h:commandLink styleClass="messageLink displaySelectedMailCommandLink"
                       action="#{mailsListingController.displaySelectedMail}"
                       value="#{(! empty dMessage.originMessage.subject) ? dMessage.originMessage.subject : viewProperties.prompt_no_subject}"
                       title="#{dMessage.originMessage.subjectTooltip}"/>
@@ -254,7 +254,7 @@
                       columnClasses="leftAlignment, rightAlignment, rightAlignment">
 
                 <%-- "Alles auswaehlen"-Button --%>
-                <h:commandLink id="selectAll" styleClass="undecoratedLink"
+                <h:commandLink id="selectAll" styleClass="undecoratedLink selectAllMailsCommandLink"
                         action="#{mailsListingController.selectAllMails}">
                   <h:graphicImage alt="select all"
                           url="/static/images/select-all.png"/>

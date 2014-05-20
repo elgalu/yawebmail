@@ -31,10 +31,6 @@
 
         <t:htmlTag value="p" styleClass="infoText">
           <h:outputText value="#{viewProperties.prompt_version_info} ("/>
-          <h:outputLink target="_blank"
-                  value="#{viewProperties.link_add_language}">
-            <h:outputText value="#{viewProperties.prompt_more_infos}"/>
-          </h:outputLink>
           <h:outputText value=")"/>
         </t:htmlTag>
 
@@ -58,7 +54,7 @@
           <h:outputText value="#{viewProperties.label_mailbox_host}"/>
           <h:panelGroup>
             <h:inputText id="mailboxHost" value="#{loginDataBean.mailboxHost}"
-                    required="true"
+                    required="true" styleClass="mailboxHostInput"
                     disabled="#{! logonController.editableMailboxHost}"/>
             <h:message for="mailboxHost" errorClass="errorText"/>
           </h:panelGroup>
@@ -85,7 +81,7 @@
             </h:commandLink>
             <h:inputText id="mailboxPort" value="#{loginDataBean.mailboxPort}"
                     rendered="#{true}"
-                    styleClass="smallInputField">
+                    styleClass="smallInputField mailboxPortInput">
               <f:validateLongRange minimum="1" maximum="65535"/>
             </h:inputText>
             <h:message for="mailboxPort" errorClass="errorText"/>
@@ -95,14 +91,14 @@
           <h:outputText value="#{viewProperties.label_mailbox_user}"/>
           <h:panelGroup>
             <h:inputText id="mailboxUser" value="#{loginDataBean.mailboxUser}"
-                    required="true"/>
+                    required="true" styleClass="mailboxUserInput"/>
             <h:message for="mailboxUser" errorClass="errorText"/>
           </h:panelGroup>
 
           <%-- Mailbox-Passwort --%>
           <h:outputText value="#{viewProperties.label_mailbox_pass}"/>
           <h:panelGroup>
-            <h:inputSecret id="mailboxPassword"
+            <h:inputSecret id="mailboxPassword" styleClass="mailboxPasswordInput"
                     value="#{loginDataBean.mailboxPassword}" required="true"/>
             <h:message for="mailboxPassword" errorClass="errorText"/>
           </h:panelGroup>
@@ -129,20 +125,11 @@
             <h:panelGroup>
               <h:commandButton value="#{viewProperties.button_login}"
                       action="#{logonController.logon}"
-                      styleClass="commandButton"/>
+                      styleClass="commandButton loginCommandButton"/>
               <h:commandButton value="#{viewProperties.button_reset}"
                       action="#{logonController.reset}"
-                      styleClass="commandButton" immediate="true"/>
+                      styleClass="commandButton resetCommandButton" immediate="true"/>
             </h:panelGroup>
-
-            <%-- Hilfe-Button --%>
-            <h:outputLink styleClass="undecoratedLink" target="_blank"
-                    value="#{viewProperties.link_help_logon}">
-              <h:graphicImage alt="help"
-                      url="/static/images/info.png"/>
-              <h:outputText styleClass="buttonTexts"
-                      value="#{viewProperties.button_help}"/>
-            </h:outputLink>
 
           </h:panelGrid>
 
@@ -158,10 +145,6 @@
 
         <t:htmlTag value="p" styleClass="infoText">
 
-          <h:outputLink target="_blank"
-                  value="#{viewProperties.link_website_yawebmail}">
-            <h:outputText value="#{applicationProperties.program_name}"/>
-          </h:outputLink>
           <h:outputText value="#{applicationProperties.program_version}"/>
 
           <h:outputText value=" ("
