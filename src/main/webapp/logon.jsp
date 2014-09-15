@@ -74,6 +74,7 @@
             </h:selectOneMenu> 
             <h:message for="mailboxProtocol" errorClass="errorText"/>
             <h:commandLink styleClass="undecoratedLink" immediate="true"
+                    id="configureAdvancedLogonProperties"
                     action="#{logonController.configureAdvancedLogonProperties}"
                     rendered="#{false}">
               <h:graphicImage alt="configure"
@@ -124,9 +125,11 @@
             <%-- Login- und Cancel-Button --%>
             <h:panelGroup>
               <h:commandButton value="#{viewProperties.button_login}"
+                      id="loginCommandButton"
                       action="#{logonController.logon}"
                       styleClass="commandButton loginCommandButton"/>
               <h:commandButton value="#{viewProperties.button_reset}"
+                      id="resetCommandButton"
                       action="#{logonController.reset}"
                       styleClass="commandButton resetCommandButton" immediate="true"/>
             </h:panelGroup>

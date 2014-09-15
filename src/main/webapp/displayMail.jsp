@@ -25,6 +25,7 @@
             <h:panelGroup>
 
               <h:commandLink styleClass="undecoratedLink"
+                      id="createReMail"
                       action="#{displayMailController.createReMail}">
                 <h:graphicImage alt="reply" url="/static/images/reply.png"/>
                 <h:outputText styleClass="replyToButtonText"
@@ -32,12 +33,14 @@
               </h:commandLink>
 
               <h:commandLink styleClass="undecoratedLink"
+                      id="createReToAllMail"
                       action="#{displayMailController.createReToAllMail}">
                 <h:outputText styleClass="buttonTexts"
                         value="| #{viewProperties.prompt_to_all}"/>
               </h:commandLink>
 
               <h:commandLink styleClass="undecoratedLink"
+                      id="createFwdMail"
                       action="#{displayMailController.createFwdMail}">
                 <h:graphicImage alt="forward" url="/static/images/forward.png"/>
                 <h:outputText styleClass="buttonTexts"
@@ -45,6 +48,7 @@
               </h:commandLink>
 
               <h:commandLink styleClass="undecoratedLink"
+                      id="viewMessageSource"
                       action="viewMessageSource">
                 <h:graphicImage alt="sourcecode"
                         url="/static/images/sourcecode.png"/>
@@ -53,13 +57,16 @@
               </h:commandLink>
 
               <h:commandLink styleClass="undecoratedLink"
+                      id="deleteMail"
                       action="#{displayMailController.deleteMail}">
                 <h:graphicImage alt="delete" url="/static/images/delete.png"/>
                 <h:outputText styleClass="buttonTexts"
                         value="#{viewProperties.button_delete_mail}"/>
               </h:commandLink>
 
-              <h:commandLink styleClass="undecoratedLink backToSummaryCommandLink" action="mailsListing">
+              <h:commandLink styleClass="undecoratedLink backToSummaryCommandLink"
+                      id="mailsListing"
+                      action="mailsListing">
                 <h:graphicImage alt="summary" url="/static/images/summary.png"/>
                 <h:outputText styleClass="buttonTexts"
                         value="#{viewProperties.button_back_to_summary}"/>
@@ -71,6 +78,7 @@
             <h:panelGroup>
 
               <h:outputLink styleClass="undecoratedLink" target="_blank"
+                      id="link_help_mailview"
                       value="#{viewProperties.link_help_mailview}">
                 <h:graphicImage alt="help"
                         url="/static/images/info.png"/>
@@ -79,6 +87,7 @@
               </h:outputLink>
 
               <h:commandLink styleClass="undecoratedLink"
+                      id="logoutLink"
                       action="#{logoutController.logout}">
                 <h:graphicImage alt="logout"
                         url="/static/images/logout.png"/>
@@ -242,7 +251,7 @@
             </h:commandLink>
             --%>
 
-            <h:outputLink target="" styleClass="openHtmlMailLink"
+            <h:outputLink id="openHtmlMailLinkPart" target="" styleClass="openHtmlMailLink"
                     value="#{facesContext.externalContext.requestContextPath}/retrieveDisplayPartContentServlet.svl">
 
               <f:param name="partNumber" value="#{partRowIndex}"/>
@@ -258,6 +267,7 @@
                   expectedValue="image/gif,image/jpeg,image/jpg,image/png">
 
             <h:graphicImage alt="#{curPart.fileName}"
+                    id="imagePartForPartContentServletWithPartNumber"
                     url="/retrieveDisplayPartContentServlet.svl?partNumber=#{partRowIndex}"/>
 
           </cuic:htmlTagIf>
@@ -293,6 +303,7 @@
           <h:panelGroup>
 
             <h:commandLink styleClass="undecoratedLink"
+                    id="createReMail_Below"
                     action="#{displayMailController.createReMail}">
               <h:graphicImage alt="reply" url="/static/images/reply.png"/>
               <h:outputText styleClass="replyToButtonText"
@@ -300,12 +311,14 @@
             </h:commandLink>
 
             <h:commandLink styleClass="undecoratedLink"
+                    id="createReToAllMail_Below"
                     action="#{displayMailController.createReToAllMail}">
               <h:outputText styleClass="buttonTexts"
                       value="| #{viewProperties.prompt_to_all}"/>
             </h:commandLink>
 
             <h:commandLink styleClass="undecoratedLink"
+                    id="createFwdMail_Below"
                     action="#{displayMailController.createFwdMail}">
               <h:graphicImage alt="forward" url="/static/images/forward.png"/>
               <h:outputText styleClass="buttonTexts"
@@ -313,6 +326,7 @@
             </h:commandLink>
 
             <h:commandLink styleClass="undecoratedLink"
+                    id="viewMessageSource_Below"
                     action="viewMessageSource">
               <h:graphicImage alt="sourcecode"
                       url="/static/images/sourcecode.png"/>
@@ -321,13 +335,16 @@
             </h:commandLink>
 
             <h:commandLink styleClass="undecoratedLink"
+                    id="deleteMail_Below"
                     action="#{displayMailController.deleteMail}">
               <h:graphicImage alt="delete" url="/static/images/delete.png"/>
               <h:outputText styleClass="buttonTexts"
                       value="#{viewProperties.button_delete_mail}"/>
             </h:commandLink>
 
-            <h:commandLink styleClass="undecoratedLink" action="mailsListing">
+            <h:commandLink styleClass="undecoratedLink"
+                    id="mailsListing_Below"
+                    action="mailsListing">
               <h:graphicImage alt="summary" url="/static/images/summary.png"/>
               <h:outputText styleClass="buttonTexts"
                       value="#{viewProperties.button_back_to_summary}"/>

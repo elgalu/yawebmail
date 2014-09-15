@@ -34,6 +34,7 @@
               </h:commandLink>
 
               <h:commandLink styleClass="undecoratedLink checkForNewMailCommandLink"
+                      id="checkForNewMail"
                       action="#{mailsListingController.checkForNewMail}">
                 <h:graphicImage alt="get new mail"
                         url="/static/images/get-new-mail.png"/>
@@ -42,6 +43,7 @@
               </h:commandLink>
 
               <h:commandLink styleClass="undecoratedLink createMailCommandLink"
+                      id="createMail"
                       action="createMail">
                 <h:graphicImage alt="create new mail"
                         url="/static/images/create-new-mail.png"/>
@@ -55,6 +57,7 @@
             <h:panelGroup>
 
               <h:outputLink styleClass="undecoratedLink" target="_blank"
+                      id="helpLink"
                       value="#{viewProperties.link_help_overview}">
                 <h:graphicImage alt="help"
                         url="/static/images/info.png"/>
@@ -63,6 +66,7 @@
               </h:outputLink>
 
               <h:commandLink styleClass="undecoratedLink logoutCommandLink"
+                      id="logoutLink"
                       action="#{logoutController.logout}">
                 <h:graphicImage alt="logout"
                         url="/static/images/logout.png"/>
@@ -168,6 +172,7 @@
             <h:column>
               <f:facet name="header">
                 <h:commandLink styleClass="undecoratedLink"
+                        id="sortBySubject"
                         action="#{mailsListingController.sortBySubject}">
                   <h:outputText value="#{viewProperties.tch_subject} "/>
                   <h:graphicImage alt="sort up"
@@ -181,6 +186,7 @@
               <h:selectBooleanCheckbox value="#{dMessage.selected}"
                       styleClass="checkBox selectMessageCheckBox"/>
               <h:commandLink styleClass="messageLink displaySelectedMailCommandLink"
+                      id="displaySelectedMail"
                       action="#{mailsListingController.displaySelectedMail}"
                       value="#{(! empty dMessage.originMessage.subject) ? dMessage.originMessage.subject : viewProperties.prompt_no_subject}"
                       title="#{dMessage.originMessage.subjectTooltip}"/>
@@ -189,6 +195,7 @@
             <h:column>
               <f:facet name="header">
                 <h:commandLink styleClass="undecoratedLink"
+                        id="sortBySender"
                         action="#{mailsListingController.sortBySender}">
                   <h:outputText value="#{viewProperties.tch_from} "/>
                   <h:graphicImage alt="sort up"
@@ -215,6 +222,7 @@
             <h:column>
               <f:facet name="header">
                 <h:commandLink styleClass="undecoratedLink"
+                        id="sortByDate"
                         action="#{mailsListingController.sortByDate}">
                   <h:outputText value="#{viewProperties.tch_date} "/>
                   <h:graphicImage alt="sort up"
@@ -233,6 +241,7 @@
             <h:column>
               <f:facet name="header">
                 <h:commandLink styleClass="undecoratedLink"
+                        id="sortBySpamlevel"
                         action="#{mailsListingController.sortBySpamlevel}">
                   <h:outputText value="#{viewProperties.tch_xSpamLevel} "/>
                   <h:graphicImage alt="sort up"
