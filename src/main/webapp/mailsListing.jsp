@@ -161,7 +161,7 @@
           </t:htmlTag>
 
           <%-- Column 2: Mails-Liste (wenn Mails am Start) --%>
-          <h:dataTable id="mailsListingTable"
+          <h:dataTable id="mailsListingTableId"
                   value="#{folderWrapperBean.displayMessages}"
                   styleClass="mailsListingTable" columnClasses="smallPadding"
                   rowClasses="clearTableRow, brightTableRow"
@@ -184,6 +184,7 @@
                 </h:commandLink>
               </f:facet>
               <h:selectBooleanCheckbox value="#{dMessage.selected}"
+                      id="selectMessageCheckBox"
                       styleClass="checkBox selectMessageCheckBox"/>
               <h:commandLink styleClass="messageLink displaySelectedMailCommandLink"
                       id="displaySelectedMail"
@@ -207,6 +208,7 @@
                 </h:commandLink>
               </f:facet>
               <t:dataList value="#{dMessage.originMessage.from}" var="actFrom"
+                      id="fromRowIndex"
                       rowCountVar="fromRowCount" rowIndexVar="fromRowIndex">
                 <h:outputText value="#{actFrom.personal}"
                         rendered="#{! empty actFrom.personal}"/>
