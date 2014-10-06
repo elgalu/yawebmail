@@ -16,10 +16,11 @@
     <t:htmlTag value="body">
       <h:form id="mailsListingForm">
 
-        <h:panelGrid styleClass="darkTableRow" columnClasses="smallPadding">
+        <h:panelGrid styleClass="darkTableRow" columnClasses="smallPadding"
+                     id="panelGriddarkTableRowsmallPadding">
 
           <%-- Kopfzeile --%>
-          <h:panelGrid columns="2"
+          <h:panelGrid columns="2" id="panelGrid2ColsWithLeftRight"
                   columnClasses="leftAlignment, rightAlignment">
 
             <%-- Mail-Aktionen --%>
@@ -82,6 +83,7 @@
 
         <%-- Aeusserer Table um Ordner-Menue und Mails-Liste --%>
         <h:panelGrid columns="#{folderWrapperBean.swappable ? 2 : 1}" styleClass="darkTableRow"
+                id="panelGridfolderWrapperBeanTinyHuge"
                 columnClasses="tinyColumn, hugeColumn">
 
           <%-- Column 1: Ordner-Menue --%>
@@ -199,10 +201,10 @@
                         id="sortBySender"
                         action="#{mailsListingController.sortBySender}">
                   <h:outputText value="#{viewProperties.tch_from} "/>
-                  <h:graphicImage alt="sort up"
+                  <h:graphicImage alt="sort up" id="sortBySenderSortUp"
                           url="/static/images/sort-up.gif"
                           rendered="#{mailsListingController.sortUpBySender}"/>
-                  <h:graphicImage alt="sort down"
+                  <h:graphicImage alt="sort down" id="sortBySenderSortDown"
                           url="/static/images/sort-down.gif"
                           rendered="#{mailsListingController.sortDownBySender}"/>
                 </h:commandLink>
@@ -261,7 +263,7 @@
             <%-- Footer --%>
             <f:facet name="footer">
 
-              <h:panelGrid columns="3"
+              <h:panelGrid columns="3" id="panelGrid3ColsLeftRightRight"
                       columnClasses="leftAlignment, rightAlignment, rightAlignment">
 
                 <%-- "Alles auswaehlen"-Button --%>
@@ -274,7 +276,8 @@
                 </h:commandLink>
 
                 <%-- Scope-info --%>
-                <h:outputFormat value="#{viewProperties.prompt_scope_messages}">
+                <h:outputFormat value="#{viewProperties.prompt_scope_messages}"
+                                id="viewProperties.prompt_scope_messages">
                   <f:param value="#{sessionContainerBean.currentOffset + 1}"/>
                   <f:param value="#{mailsListingController.numberLastMessage}"/>
                   <f:param value="#{folderWrapperBean.overallMessageCount}"/>
@@ -320,7 +323,8 @@
 
           <%-- Column 2 - alternativ (wenn keine Mails am Start) --%>
           <h:panelGrid rowClasses="twilightTableRow, centeredAlignment"
-                  rendered="#{folderWrapperBean.messageCount < 1}">
+                       id="panelGridtwilightTableRowcenteredAlignment"
+                       rendered="#{folderWrapperBean.messageCount < 1}">
 
             <h:outputText value="#{viewProperties.prompt_no_messages_in_folder}"
                       styleClass="slightlyBiggerFont"/>
@@ -342,7 +346,8 @@
 
           <t:htmlTag value="hr"/>
 
-          <h:panelGrid styleClass="darkTableRow" columnClasses="rightAlignment">
+          <h:panelGrid styleClass="darkTableRow" columnClasses="rightAlignment"
+                       id="panelGriddarkTableRowrightAlignment">
 
             <%-- Mail-Verschiebe-Aktionen --%>
             <h:panelGroup>
