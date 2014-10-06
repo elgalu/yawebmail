@@ -277,7 +277,7 @@
 
                 <%-- Scope-info --%>
                 <h:outputFormat value="#{viewProperties.prompt_scope_messages}"
-                                id="viewProperties.prompt_scope_messages">
+                                id="viewPropertiesPromptScopeMessages">
                   <f:param value="#{sessionContainerBean.currentOffset + 1}"/>
                   <f:param value="#{mailsListingController.numberLastMessage}"/>
                   <f:param value="#{folderWrapperBean.overallMessageCount}"/>
