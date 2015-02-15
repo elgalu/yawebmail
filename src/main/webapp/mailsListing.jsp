@@ -277,10 +277,13 @@
 
                 <%-- Scope-info --%>
                 <h:outputFormat value="#{viewProperties.prompt_scope_messages}"
-                                id="viewPropertiesPromptScopeMessages">
-                  <f:param value="#{sessionContainerBean.currentOffset + 1}"/>
-                  <f:param value="#{mailsListingController.numberLastMessage}"/>
-                  <f:param value="#{folderWrapperBean.overallMessageCount}"/>
+                                id="viewPropertiesPromptScopeMessagesOutputFormat">
+                  <f:param value="#{sessionContainerBean.currentOffset + 1}"
+                    id="viewPropertiesPromptScopeMessages_sessionContainerBean"/>
+                  <f:param value="#{mailsListingController.numberLastMessage}"
+                    id="viewPropertiesPromptScopeMessages_mailsListingController"/>
+                  <f:param value="#{folderWrapperBean.overallMessageCount}"
+                    id="viewPropertiesPromptScopeMessages_folderWrapperBean"/>
                 </h:outputFormat>
 
                 <%-- Paging --%>
